@@ -2,6 +2,8 @@
         var geocoder;
         var map;
 
+        var markers = [];
+
         $('#creaMappa').click(function () {
             var address = $('#addr').val();
 
@@ -40,6 +42,9 @@
                         draggable: false,
                         animation: google.maps.Animation.DROP
                     });
+
+                    markers.push(marker);
+
                     var contentString = '<div id="content">' +
                         '<div id="siteNotice">' +
                         '</div>' +
