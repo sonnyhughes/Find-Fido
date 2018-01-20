@@ -73,6 +73,10 @@ body {
   margin-top: -13px;
 }
 
+#dogNameInput{
+  overflow-y: scroll;
+}
+
 button:hover, a:hover {
     text-decoration: none;
     border-bottom: 3px solid white;
@@ -146,7 +150,18 @@ button:hover, a:hover {
   color: white;
 }
 
-@media (min-width: 575px) {
+@media (min-width: 576px) {
+
+  .navbar{
+    padding: 5%;
+    height: 2%;
+  }
+  .navbar-brand{
+    margin-bottom:10%;
+  }
+  .lost, .found{
+    width: 23%;
+  }
   #firstDog{
     margin-top: -9%;
   }
@@ -156,11 +171,16 @@ button:hover, a:hover {
   }
 
   #lostandfound{
-    top: 25px;
+    top: 82px;
+    padding: 2%;
+    width: 100%;
   }
 }
 
 @media (min-width: 768px) {
+  .navbar{
+    padding:3%;
+  }
   #firstDog{
     margin-top: -7%;
   }

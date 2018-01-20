@@ -90,14 +90,56 @@
            <!-- Report Missing Dog Form-->          <!-- Submission form for new dogs -->
           <div class="panel-body">
             <form>
-              <div class="form-group">
-                <label for="">Breed</label>
-                <input type="text" class="form-control" id="dogNameInput">
-              </div>
+                <div class="dropdown form-group">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="true" style="width:100%;">
+                      Are you reporting a lost or found animal?
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li class="dropdown-header">Lost</li>
+                      <li class="dropdown-header">Found</li>
+                      
+                    </ul>
+                  </div>
+                  <div class="dropdown form-group">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="true" style="width:100%;">
+                      Dog Breed
+                      <span class="caret"></span>
+                    </button>
+                 
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="dogNameInput" size="5">
+                      
+                      <li class="dropdown-header">Terrier</li>
+                      <li class="dropdown-header">Bulldog</li>
+                      <li class="dropdown-header">Hound</li>
+                      <li class="dropdown-header">Retriever</li>
+                      <li class="dropdown-header">Chihuahua</li>
+                      <li class="dropdown-header">Poodle</li>
+                      <li class="dropdown-header">Husky</li>
+                      <li class="dropdown-header">Shepherd</li>
+                      <li class="dropdown-header">Shih Tzu</li>
+                      <li class="dropdown-header">Pomeranian</li>
+                      <li class="dropdown-header">Spaniel</li>
+                      <li class="dropdown-header">Cattle Dog</li>
+                      
+                    </ul>
+                  
+                  </div>
+              
 
-              <div class="form-group">
-                <label for="">Weight</label>
-                <input type="text" class="form-control" id="lineNumberInput">
+              <div class="dropdown form-group" id="lineNumberInput">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="true" style="width:100%;">
+                  Size
+                  <span class="caret"></span>
+                </button>
+                <ul class ="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li class="dropdown-header">Small</li>
+                <li class="dropdown-header">Medium</li>
+                <li class="dropdown-header">Large</li>
+              </ul>
               </div>
 
               <div class="form-group">
