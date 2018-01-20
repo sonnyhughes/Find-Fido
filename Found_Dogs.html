@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="startbootstrap-full-width-pics-master/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Link to use social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet" type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
+  <!-- Custom styles for this template -->
+  <link href="startbootstrap-full-width-pics-master/css/full-width-pics.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/auth.css">
+
+  <!--Google Maps API Link-->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQplToC7vrZZPdPirJm0clLpN3YbMW6U&libraries=places"></script>
+
+  <title id="logo">Find Fido</title>
+
+  <style>
+    .pac-container {
+      z-index: 10000 !important;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+<div id="wrapper">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div id="header" class="container">
+      <div class="row">
+        <div class="col-6">
+          <a class="navbar-brand" href="index.html">Find Fido</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="content">
+  <!-- Header - set the background image for the header in the line below -->
+  
+<div class="jumbotron col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h1 class="text-center">Search Lost Dogs</h1>
+      <h1 class="text-center">✶ ✶ ✶ ✶</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!-- Current Lost Dogs -->
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h2 class="panel-title"><strong>Recently Reported:</strong></h2>
+          </div>
+          <div class="panel-body">
+            <table class="table table-hover" id='dogTable'>
+              <thead>
+                <tr>
+                  <th>Breed</th>
+                  <th>Weight</th>
+                  <th>Color</th>
+                  <th>Weight</th>
+                  <th>Lost Time</th>
+                  <th>Lost Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark" id="footerChange">
+    <div class="container" id="footer">
+      <div class="row">
+        <div class="col-xs-12 col-md-4 text-center text-white">
+          <p>About</p>
+          <p class="small">Founded in 2018</p>
+          <p class="small">Based in Chicago, IL</p>
+          </div>
+        <div class="col-xs-12 col-md-4 text-center text-white">
+          <p>Contact</p>
+          <p class="small">Email: findfido@fido.com</p>
+          <p class="small">Phone: 1-800-555-PETS</p>
+        </div>
+        <div class="col-xs-12 col-md-4 text-center text-white">
+          <p>Resources</p>
+          <p class="small">Google</p>
+          <p class="small">Petfinder</p>
+          
+        </div>
+        
+      </div>
+      <!-- <p class="m-0 text-center text-white">&copy; Northwestern University 2018</p> -->
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="startbootstrap-full-width-pics-master/vendor/jquery/jquery.min.js"></script>
+  <script src="startbootstrap-full-width-pics-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+
+  <!-- Firebase -->
+  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+  <!-- Moment.js -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <!-- Javascript -->
+  <script src="assets/javascript/main.js"></script>
+
+
+</body>
+
+</html>

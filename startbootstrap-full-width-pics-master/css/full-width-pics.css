@@ -1,0 +1,192 @@
+/*!
+ * Start Bootstrap - Full Width Pics (https://startbootstrap.com/template-overviews/full-width-pics)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full-width-pics/blob/master/LICENSE)
+ */
+ html{
+  height: 100%;
+  width: 100%;
+ }
+ 
+body {
+  width: 100%;
+  height: 100%;
+  /* padding-top: 54px; */
+  overflow-x: hidden;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+#logo{
+  font-family: 'BenchNine', sans-serif;
+  font-size: 2em;
+  width: 5%;
+  color: white;
+  padding: 10px;
+  margin: 10px 10px;
+  line-height: 15px;
+}
+
+.bg-image-full {
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: 100%;
+  
+  
+ 
+}
+
+#firstDog{
+  margin-top: -5%;
+  padding: 5%;
+  
+}
+
+#secondDog{
+ 
+  margin-bottom: -12%;
+  padding: 15%;
+}
+
+.lost, .found{
+  font-family: 'BenchNine', sans-serif;
+  color: black;
+  width: 25%;
+  margin: 0 auto;
+  display: block;
+  background-color: rgb(245, 249, 250);
+  box-shadow: 0 8px 6px -6px black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+   
+}
+
+.lost{
+  margin-top: -13px;
+}
+
+button:hover, a:hover {
+    text-decoration: none;
+    border-bottom: 3px solid white;
+    transition: color 1s;
+}
+ 
+#lostandfound{
+  position: relative;
+  margin: 11%;
+  left: -14%;
+  
+  
+}
+
+.navbar-brand{
+  font-family: 'BenchNine', sans-serif;
+  font-size: 2em;
+  height: 45px;
+}
+
+#userReviews{
+  margin-bottom: -15%;
+  position: relative;
+  padding-top: 14%;
+}
+
+
+			
+#footerChange{
+  margin-top: 10%;
+  bottom: 0; 
+  padding-bottom: 0%; 
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.small{
+  font-size: 12px;
+  color: rgb(172, 161, 161);
+}
+/* Social Media CSS */
+
+.social{
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.fa{
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 24px;
+  width: -6px;
+  text-align: center;
+  text-decoration: none;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+@media (min-width: 575px) {
+  #firstDog{
+    margin-top: -9%;
+  }
+
+  #secondDog{
+    margin-bottom: -19%;
+  }
+
+  #lostandfound{
+    top: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  #firstDog{
+    margin-top: -7%;
+  }
+  #secondDog{
+    margin-bottom: -16%;
+  }
+}
+
+@media (min-width: 992px){
+  #firstDog{
+    margin-top: -6%;
+  }
+  #secondDog{
+    margin-bottom: -14%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #secondDog{
+    margin-bottom: -12%;
+  }
+}
+
+
+
+
+
+
+
