@@ -5,6 +5,7 @@
         var markers =[];
         var lost =[];
 
+
         $('#creaMappa').click(function () {
             var address = $('#addr').val();
 
