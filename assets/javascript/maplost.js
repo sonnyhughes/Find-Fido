@@ -2,6 +2,9 @@
         var geocoder;
         var map;
 
+        var markers =[];
+        var lost =[];
+
         $('#creaMappa').click(function () {
             var address = $('#addr').val();
 
@@ -9,7 +12,7 @@
             geocoder.geocode({ 'address': address }, function (results, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
 
-                    console.log('geocoder results:');
+                    //console.log('geocoder results:');
                     console.dir(results);
 
                     var mapOptions = {
@@ -30,6 +33,7 @@
 
                     $('#lat').text(results[0].geometry.location.lat());
                     $('#lng').text(results[0].geometry.location.lng());
+                    
 
                     //map.setCenter(results[0].geometry.location);
                     var marker = new google.maps.Marker({
@@ -40,6 +44,7 @@
                         draggable: false,
                         animation: google.maps.Animation.DROP
                     });
+
                     var contentString = '<div id="content">' +
                         '<div id="siteNotice">' +
                         '</div>' +
