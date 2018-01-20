@@ -97,14 +97,18 @@
                     
                       <form>
                         <div class="form-group">
-                          <label for="sel1">Are you reporting a lost or found animal:</label>
-                          <select class="form-control" id="sel1">
+                            <!-- Email Input -->
+                         <label for="userContactEmail">Email Address:</label>
+                         <input type="text" class="form-control" placeholder="email@email.com" id="userContactEmail">
+                              <!-- Lost or Found Input -->
+                          <label for="dogLostFoundInput">Are you reporting a lost or found animal:</label>
+                          <select class="form-control" id="dogLostFoundInput">
                             <option>Lost</option>
                             <option>Found</option>
                           </select>
-                          
-                          <label for="sel2">Breed:</label>
-                          <select multiple class="form-control" id="sel2" show="5">
+                          <!-- Breed Input -->
+                          <label for="dogBreedInput">Breed:</label>
+                          <select multiple class="form-control" show="5" id="dogBreedInput">
                             <option>Bulldog</option>
                             <option>Cattle Dog</option>
                             <option>Chihuahua</option>
@@ -119,30 +123,39 @@
                             <option>Spaniel</option>
                             <option>Terrier</option>
                           </select>
-                          <label for="sel1">Color:</label>
-                          <select class="form-control" id="sel1">
+                          <!-- Color Input -->
+                          <label for="dogColorInput">Color:</label>
+                          <select class="form-control" id="dogColorInput">
                             <option>Brown</option>
                             <option>Black</option>
                             <option>White</option>
                             <option>Red</option>
                             <option>Gray</option>
                           </select>
-                          <label for="sel1">Size</label>
-                          <select class="form-control" id="sel1">
+                          <!-- Size Input -->
+                          <label for="dogWeightInput">Size</label>
+                          <select class="form-control" id="dogWeightInput">
                             <option>Small</option>
                             <option>Medium</option>
                             <option>Large</option>
                           </select>
+                          <!-- Location Input -->
                           <div class="form-group">
-                            <label for="">Last Known Location</label>
-                            <input type="text" class="form-control" id="addr" value="Chicago,Il" placeholder="Location (Address or Place)">
+                            <label for="dogLocationInput">Last Known Location</label>
+                            <input type="text" class="form-control" id="addr" value="Chicago,Il" placeholder="Location (Address or Place)" id="dogLocationInput">
                           </div>
-                          <label for="sel1">Missing Since (time of day):</label>
-                          <select class="form-control" id="sel1">
+                          <!-- Missing Date Input -->
+                          <label for="dogMissingDateInput">Missing Since (Date):</label>
+                          <input type="text" class="form-control" placeholder="MM/DD/YY" id="dogMissingDateInput">
+                          
+                          <!-- Missing Time Input -->
+                          <label for="dogMissingTimeInput">Missing Since (time of day):</label>
+                          <select class="form-control" id="dogMissingTimeInput">
                             <option>Morning</option>
                             <option>Afternoon</option>
                             <option>Evening</option>
                           </select>
+
                         </div>
                       </form>
                     </div>
@@ -212,7 +225,7 @@
   <section class="py-5">
     <div class="container" id="userReviews">
 
-
+      <!-- User Experience Section -->
       <h3>Your Experience Matters to Us</h3>
       <p></p>
       <div class="row">
@@ -240,6 +253,7 @@
           </p>
         </div>
       </div>
+      <!-- Social Media Icon Input -->
       <div class="row">
         <div class="col-xs-12 text-center social">
           <a href="#" class="fa fa-facebook"></a>
