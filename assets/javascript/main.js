@@ -12,7 +12,7 @@ $(document).ready(function(){
         var BreedInput = $("#dogBreedInput").val().trim();
         var ColorInput = $("#dogColorInput").val().trim();
         var WeightInput = $("#dogWeightInput").val().trim();
-        var LocationInput = $("#dogLocationInput").val().trim();
+        var LocationInput = $("#addr").val().trim();
         var MissingDateInput = $("#dogMissingDateInput").val().trim();
         var MissingTimeInput = $("#dogMissingTimeInput").val().trim();
         var ContactEmail = $("#userContactEmail").val().trim();
@@ -64,7 +64,7 @@ $(document).ready(function(){
         $("#dogBreedInput").val("");
         $("#dogColorInput").val("");
         $("#dogWeightInput").val("");
-        $("#dogLocationInput").val("");
+        $("#addr").val("");
         $("#dogMissingDateInput").val("");
         $("#dogMissingTimeInput").val("");
         $("#userContactEmail").val("");

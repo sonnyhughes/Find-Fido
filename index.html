@@ -97,9 +97,6 @@
                     
                       <form>
                         <div class="form-group">
-                            <!-- Email Input -->
-                         <label for="userContactEmail">Email Address:</label>
-                         <input type="text" class="form-control" placeholder="email@email.com" id="userContactEmail">
                               <!-- Lost or Found Input -->
                           <label for="dogLostFoundInput">Are you reporting a lost or found animal:</label>
                           <select class="form-control" id="dogLostFoundInput">
@@ -108,7 +105,7 @@
                           </select>
                           <!-- Breed Input -->
                           <label for="dogBreedInput">Breed:</label>
-                          <select multiple class="form-control" show="5" id="dogBreedInput">
+                          <select class="form-control" id="dogBreedInput">
                             <option>Bulldog</option>
                             <option>Cattle Dog</option>
                             <option>Chihuahua</option>
@@ -142,7 +139,7 @@
                           <!-- Location Input -->
                           <div class="form-group">
                             <label for="dogLocationInput">Last Known Location</label>
-                            <input type="text" class="form-control" id="addr" value="Chicago,Il" placeholder="Location (Address or Place)" id="dogLocationInput">
+                            <input type="text" class="form-control" id="addr" value="Chicago,Il" placeholder="Location (Address or Place)">
                           </div>
                           <!-- Missing Date Input -->
                           <label for="dogMissingDateInput">Missing Since (Date):</label>
@@ -155,6 +152,10 @@
                             <option>Afternoon</option>
                             <option>Evening</option>
                           </select>
+                          
+                          <!-- Email Input -->
+                         <label for="userContactEmail">Email Address:</label>
+                         <input type="text" class="form-control" placeholder="email@email.com" id="userContactEmail">
 
                         </div>
                       </form>
