@@ -1,9 +1,8 @@
    $(document).ready(function () {
         var geocoder;
         var map;
-
         var markers =[];
-        var lost =[];
+    
 
 
         $('#creaMappa').click(function () {
@@ -31,9 +30,6 @@
                     }
 
                     map = new google.maps.Map(document.getElementById('map1'), mapOptions);
-
-                    $('#lat').text(results[0].geometry.location.lat());
-                    $('#lng').text(results[0].geometry.location.lng());
                     
 
                     //map.setCenter(results[0].geometry.location);
