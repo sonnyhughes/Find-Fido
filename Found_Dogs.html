@@ -72,7 +72,9 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <div class="map2" id="map2"></div>
+      <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+      <div id="map"></div>
+      <!-- <div class="map2" id="map2"></div> -->
     </div>
   </div>
 </div>
@@ -136,12 +138,15 @@
   </footer>
 </div>
 
-  <script src="assets/javascript/search.js"></script>
+  
 
   <!-- Bootstrap core JavaScript -->
   <script src="startbootstrap-full-width-pics-master/vendor/jquery/jquery.min.js"></script>
   <script src="startbootstrap-full-width-pics-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   
+  <!-- Google Places API Link
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initAutocomplete" async
+    defer></script> -->
 
   <!-- Firebase -->
   <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
@@ -149,6 +154,7 @@
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   <!-- Javascript -->
   <script src="assets/javascript/main.js"></script>
+  <script src="assets/javascript/search.js"></script>
 
 
 </body>
