@@ -6,7 +6,7 @@ $(document).ready(function(){
     //maps
     var geocoder;
     var map;
-    var markers = [];
+    var markers =[];
 
     //autocomplete form Google
     function init() {
@@ -21,6 +21,17 @@ $(document).ready(function(){
     // Button to add Dogs
     $("#addDog").on("click", function(){
 
+        // Parses input values and attaches them to a variable      
+        var LostFoundInput = $("#dogLostFoundInput").val().trim();
+        var BreedInput = $("#dogBreedInput").val().trim();
+        var ColorInput = $("#dogColorInput").val().trim();
+        var WeightInput = $("#dogWeightInput").val().trim();
+        var LocationInput = $("#addr").val().trim();
+        var MissingDateInput = $("#dogMissingDateInput").val().trim();
+        var MissingTimeInput = $("#dogMissingTimeInput").val().trim();
+        var ContactEmail = $("#userContactEmail").val().trim();
+        var commentInput = $("#userComment").val().trim();
+
         //show map
         $(".showMap").addClass("map");
 
@@ -32,7 +43,7 @@ $(document).ready(function(){
             if (status == google.maps.GeocoderStatus.OK) {
 
                 //console.log('geocoder results:');
-                console.dir(results);
+                //console.dir(results);
 
                 var mapOptions = {
                     zoom: 16,
@@ -54,12 +65,21 @@ $(document).ready(function(){
                 //map.setCenter(results[0].geometry.location);
                 var marker = new google.maps.Marker({
                     map: map,
-                    title: "Lost Dog",
-                    label: "Lost",
+                    title: LostFoundInput + " dog",
+                    label: LostFoundInput,
                     position: results[0].geometry.location,
                     draggable: false,
-                    animation: google.maps.Animation.DROP
+                    animation: google.maps.Animation.DROP,
+                    // icon: {
+                    //     fillColor: '#6331AE',
+                    //     fillOpacity: 1,
+                    //     strokeColor: '',
+                    //     strokeWeight: 0
+                    // },
                 });
+
+                markers.push(marker);
+                
 
                 var contentString = '<div id="content">' +
                     '<div id="siteNotice">' +
@@ -87,29 +107,17 @@ $(document).ready(function(){
             }
         })
 
-
-        // Parses input values and attaches them to a variable      
-        var LostFoundInput = $("#dogLostFoundInput").val().trim();
-        var BreedInput = $("#dogBreedInput").val().trim();
-        var ColorInput = $("#dogColorInput").val().trim();
-        var WeightInput = $("#dogWeightInput").val().trim();
-        var LocationInput = $("#addr").val().trim();
-        var MissingDateInput = $("#dogMissingDateInput").val().trim();
-        var MissingTimeInput = $("#dogMissingTimeInput").val().trim();
-        var ContactEmail = $("#userContactEmail").val().trim();
-        var commentInput = $("#userComment").val().trim();
-
-
         // Check variable inputs
-        console.log(LostFoundInput);
-        console.log(BreedInput);
-        console.log(ColorInput);
-        console.log(WeightInput);
-        console.log(LocationInput);
-        console.log(MissingDateInput);
-        console.log(MissingTimeInput);
-        console.log(ContactEmail);
-        console.log(commentInput);
+        // console.log(LostFoundInput);
+        // console.log(BreedInput);
+        // console.log(ColorInput);
+        // console.log(WeightInput);
+        // console.log(LocationInput);
+        // console.log(MissingDateInput);
+        // console.log(MissingTimeInput);
+        // console.log(ContactEmail);
+        // console.log(commentInput);
+        
 
 
         // Creates object from input fields and pushes to firebase
@@ -122,7 +130,7 @@ $(document).ready(function(){
             missingTime: MissingTimeInput,
             contactEmail: ContactEmail,
             comment: commentInput,
-            marker: marker
+            //marker: markers[0]
         }
 
 
@@ -149,7 +157,7 @@ $(document).ready(function(){
     // Event function 
     dogData.on("child_added", function(childSnapshot, prevChildKey){
 
-        console.log(childSnapshot.val());
+       // console.log(childSnapshot.val());
 
         // assign firebase variables to snapshots.     
         var firebaseLostFound = childSnapshot.val().lostFound;
