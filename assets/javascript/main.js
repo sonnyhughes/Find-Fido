@@ -121,7 +121,8 @@ $(document).ready(function(){
             missingDate: MissingDateInput,
             missingTime: MissingTimeInput,
             contactEmail: ContactEmail,
-            comment: commentInput
+            comment: commentInput,
+            marker: marker
         }
 
 
