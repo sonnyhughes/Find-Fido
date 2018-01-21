@@ -144,9 +144,39 @@ button:hover, a:hover {
   background: #007bb5;
   color: white;
 }
+@media screen and (min-width: 360px){
+  .navbar{
+    padding: 5%;
+    height: 2%;
+  }
+  .navbar-brand{
+    margin-bottom:3%;
+  }
+  .lost, .found{
+    width: 23%;
+  }
+  #firstDog{
+    margin-top: -9%;
+  }
+
+  #secondDog{
+    margin-bottom: -19%;
+  }
+
+  #lostandfound{
+    top: 42px;
+    padding: 2%;
+    width: 227%;
+  }
+}
+
+
 
 @media screen and (min-width: 576px) {
-
+  body{
+    width:100%;
+    height:100%;
+  }
   .navbar{
     padding: 5%;
     height: 2%;
