@@ -11,14 +11,7 @@
 body {
   width: 100%;
   height: 100%;
-  /* padding-top: 54px; */
   overflow-x: hidden;
-}
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
 }
 
 #logo{
@@ -29,6 +22,13 @@ body {
   padding: 10px;
   margin: 10px 10px;
   line-height: 15px;
+}
+
+
+.navbar-brand{
+  font-family: 'BenchNine', sans-serif;
+  font-size: 3em;
+  height: 127px;
 }
 
 .bg-image-full {
@@ -79,7 +79,7 @@ body {
 
 button:hover, a:hover {
     text-decoration: none;
-    border-bottom: 3px solid white;
+  
     transition: color 1s;
 }
  
@@ -91,11 +91,6 @@ button:hover, a:hover {
   
 }
 
-.navbar-brand{
-  font-family: 'BenchNine', sans-serif;
-  font-size: 2em;
-  height: 66px;
-}
 
 #userReviews{
   margin-bottom: -15%;
@@ -150,14 +145,14 @@ button:hover, a:hover {
   color: white;
 }
 
-@media (min-width: 576px) {
+@media screen and (min-width: 576px) {
 
   .navbar{
     padding: 5%;
     height: 2%;
   }
   .navbar-brand{
-    margin-bottom:10%;
+    margin-bottom:8%;
   }
   .lost, .found{
     width: 23%;
@@ -203,6 +198,7 @@ button:hover, a:hover {
     margin-bottom: -12%;
   }
 }
+
 
 
 
