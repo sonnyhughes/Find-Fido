@@ -14,6 +14,8 @@
   <link href="startbootstrap-full-width-pics-master/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Link to use social media icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- map css -->
+  <link rel="stylesheet" href="assets/css/map.css">
   
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet" type='text/css'>
@@ -21,10 +23,12 @@
   <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
   <!-- Custom styles for this template -->
   <link href="startbootstrap-full-width-pics-master/css/full-width-pics.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/auth.css">
+
 
   <!--Google Maps API Link-->
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQplToC7vrZZPdPirJm0clLpN3YbMW6U&libraries=places"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQplToC7vrZZPdPirJm0clLpN3YbMW6U&callback=initMap" async
+    defer></script>
+  </body>
 
   <title id="logo">Find Fido</title>
 
@@ -49,52 +53,59 @@
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          </div>
-
         </div>
       </div>
     </div>
   </nav>
+</div>
 
-  <div id="content">
-  <!-- Header - set the background image for the header in the line below -->
-  
-<div class="jumbotron col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <h1 class="text-center">Search Lost Dogs</h1>
-      <h1 class="text-center">✶ ✶ ✶ ✶</h1>
+
+<div id="content" class="row">
+    <!-- Header - set the background image for the header in the line below -->   
+  <div class="jumbotron col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1 class="text-center">Search Lost Dogs</h1>
+        <h1 class="text-center">✶ ✶ ✶ ✶</h1>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="map2" id="map2"></div>
     </div>
+  </div>
+</div>
 
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-        <!-- Current Lost Dogs -->
-        <div class="panel panel-info">
-          <div class="panel-heading">
-            <h2 class="panel-title"><strong>Recently Reported:</strong></h2>
-          </div>
-          <div class="panel-body">
-            <table class="table table-hover" id='dogTable'>
-              <thead>
-                <tr>
-                  <th>Status</th>
-                  <th>Breed</th>
-                  <th>Color</th>
-                  <th>Location</th>
-                  <th>Missing Since</th>
-                  <th>Lost Time of Day</th>
-                  <th>Please Contact</th>
-                  <th>Comments</th>
-                </tr>
-              </thead>
-              <tbody>
-                
-              </tbody>
-            </table>
-          </div>
-        </div>
-        
+    <!-- Current Lost Dogs -->
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h2 class="panel-title"><strong>Recently Reported:</strong></h2>
+      </div>
+      <div class="panel-body">
+        <table class="table table-hover" id='dogTable'>
+          <thead>
+            <tr>
+              <th>Status</th>
+              <th>Breed</th>
+              <th>Color</th>
+              <th>Location</th>
+              <th>Missing Since</th>
+              <th>Lost Time of Day</th>
+              <th>Please Contact</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
       </div>
     </div>
+    
+   </div>
+  </div>
+</div>
   
 
   <!-- Footer -->
@@ -125,6 +136,7 @@
   </footer>
 </div>
 
+  <script src="assets/javascript/search.js"></script>
 
   <!-- Bootstrap core JavaScript -->
   <script src="startbootstrap-full-width-pics-master/vendor/jquery/jquery.min.js"></script>
