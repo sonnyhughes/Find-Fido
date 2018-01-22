@@ -51,10 +51,10 @@
         <div class="row">
           <div class="col-6">
             <a class="navbar-brand" href="index.html">Find Fido</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
               aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
           </div>
         </div>
       </div>
@@ -62,65 +62,125 @@
   </div>
 
 
-      <!-- Header - set the background image for the header in the line below -->
-      <div class="jumbotron col-xs-12 col-sm-12 col-md-12 col-lg-12" id="searchText">
-        <div id="content" class="jumboText">
-          <h1 class="text-center">Search Lost Dogs</h1>
-          <h1 class="text-center">✶ ✶ ✶ ✶</h1>
+  <!-- Header - set the background image for the header in the line below -->
+  <div class="jumbotron col-xs-12 col-sm-12 col-md-12 col-lg-12" id="searchText">
+    <div id="content" class="jumboText">
+      <h1 class="text-center">Search Lost Dogs</h1>
+      <h1 class="text-center">✶ ✶ ✶ ✶</h1>
+      <button type="button" class="lost btn btn-info btn-lg vetButton" data-toggle="modal" data-target="#vetModal">Find a Vet</button>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Vet Modal Pop up -->
+  <div id="vetModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="panel-body">
+            <form>
+              <div class="container">
+                <h2>Enter Location to Search Local Veterinarians</h2>
+
+                <form>
+                  <div class="form-group">
+                    <div style="float: right;">
+                      <div id="map" style="width:900px; height:600px;"></div>
+                    </div>
+
+                    <div style="float: left; width: 400;">
+                      <form name="frm_map" id="frm_map">
+                        <table>
+                          <tr>
+                            <th>Address:</th>
+                            <td>
+                              <input type="text" class="vetInput" name="address" id="address" placeholder="Chicago, Il">
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>Radius:</th>
+                            <td>
+                              <input type="text" class="vetInput" name="radius" id="radius" placeholder="5">
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>
+                              <input type="button" value="Show" id="submit" onclick="renderMap();">
+                              <input type="reset" value="Reset">
+                            </td>
+                          </tr>
+                        </table>
+                      </form>
+                    </div>
+                  </div>
+                </form>
+              </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  
 
 
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-      <div id="map"></div>
-      <!-- <div class="map2" id="map2"></div> -->
-    </div>
-  </div>
-</div>
-  <!-- Current Lost Dogs -->
-  <div class="panel panel-info" id="reported">
-   
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">µ
-        <div class="map2" id="map2"></div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+
+        <div id="map"></div>
+        <!-- <div class="map2" id="map2"></div> -->
       </div>
     </div>
   </div>
 
-  <!-- Current Lost Dogs -->
-  <div class="panel panel-info">
-    <div class="panel-heading">
-      <h2 class="panel-title">
-        <strong>Recently Reported:</strong>
-      </h2>
-    </div>
-    <div class="panel-body">
-      <table class="table table-hover" id='dogTable'>
-        <thead>
-          <tr>
-            <th>Status</th>
-            <th>Breed</th>
-            <th>Color</th>
-            <th>Location</th>
-            <th>Missing Since</th>
-            <th>Lost Time of Day</th>
-            <th>Please Contact</th>
-            <th>Comments</th>
-          </tr>
-        </thead>
-        <tbody>
 
-        </tbody>
-      </table>
+  <!-- Current Lost Dogs -->
+  <div class="panel panel-info" id="reported">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">µ
+          <div class="map2" id="map2"></div>
+        </div>
+      </div>
     </div>
-  </div>
+
+    <!-- Current Lost Dogs -->
+    <div class="panel panel-info" id="reportTable">
+      <div class="panel-heading">
+        <h2 class="panel-title">
+          <strong>Recently Reported:</strong>
+        </h2>
+      </div>
+      <div class="panel-body">
+        <table class="table table-hover" id='dogTable'>
+          <thead>
+            <tr>
+              <th>Status</th>
+              <th>Breed</th>
+              <th>Color</th>
+              <th>Location</th>
+              <th>Missing Since</th>
+              <th>Lost Time of Day</th>
+              <th>Please Contact</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
 
   </div>
   </div>
