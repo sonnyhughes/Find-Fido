@@ -152,7 +152,15 @@ $(document).ready(function(){
         // Prevents page refresh
         return false;
     });
+    
 
+    //Pushes image upload to Firebase Storage
+    var fileButton = document.getElementById('fileButton');
+    fileButton.addEventListener('change', function(e){
+        var file = e.target.files[0];
+        var storageRef = firebase.storage().ref('img/'+file.name);
+        var task = storageRef.put(file);
+    }); 
 
     // Event function 
     dogData.on("child_added", function(childSnapshot, prevChildKey){

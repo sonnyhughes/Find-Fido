@@ -78,8 +78,12 @@
         <!-- <a class="lost" href="Lost2.html">Report</a> -->
         <button type="button" class="lost btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Report</button>
         <a class="found" href="Found_Dogs.html">Search</a>
-
-
+        
+        <label class="found">
+          <input id="fileButton" type="file" value= "upload" style="display:none;">
+            Upload Image
+        </label>
+      </div>
         <!-- Modal -->
         <div id="myModal" class="modal fade" role="dialog">
           <div class="modal-dialog">
@@ -312,15 +316,26 @@
   <!-- Bootstrap core JavaScript -->
   <script src="startbootstrap-full-width-pics-master/vendor/jquery/jquery.min.js"></script>
   <script src="startbootstrap-full-width-pics-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Firebase -->
+  <!-- Firebase 2.4.1 for the database push and rest of app-->
   <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
   <!-- Moment.js -->
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   <!-- Javascript -->
   <script src="assets/javascript/main.js"></script>
-
-
+  <!-- Firebase 3.7.4 for the storage push-->
+  <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+  <!-- Initialize Firebase -->
+  <script>
+    var config = {
+      apiKey: "AIzaSyCY_YbuxtgsKPyTNvN0cnzCAWHr51RMJ84",
+      authDomain: "nwuproject1.firebaseapp.com",
+      databaseURL: "https://nwuproject1.firebaseio.com",
+      projectId: "nwuproject1",
+      storageBucket: "nwuproject1.appspot.com",
+      messagingSenderId: "218962101512"
+    };
+    firebase.initializeApp(config);
+  </script>
 </body>
 
 </html>
