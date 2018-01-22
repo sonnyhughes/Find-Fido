@@ -87,8 +87,6 @@ button:hover, a:hover {
   position: relative;
   margin: 11%;
   left: -14%;
-  
-  
 }
 
 
@@ -106,7 +104,7 @@ button:hover, a:hover {
 }
 
 #map2{
-  top: 0%;
+  top: -62%;
   right:0%;
   position: relative;
   width: 1000px;
@@ -121,6 +119,21 @@ button:hover, a:hover {
 #reported{
   margin: 5%;
   margin-left: 100px;
+}
+
+#reportTable{
+  margin-top: -30%;
+}
+
+/* Vet Modal Styling */
+
+.vetInput{
+  width: 200%;
+}
+
+.vetButton{
+  margin-left: 39%;
+  margin-top: 1%;
 }
 
 			
@@ -284,9 +297,7 @@ button:hover, a:hover {
   #secondDog{
     margin-bottom: -12%;
   }
-  #footerChange{
-    width: 100%;
-  }
+ 
 }
 
 
