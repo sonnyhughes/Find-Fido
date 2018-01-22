@@ -1,6 +1,27 @@
+$(document).ready(function(){
+// Firebase
+    var dogData = new Firebase("https://nwuproject1.firebaseio.com/");
+// Event function 
+    dogData.on("child_added", function(childSnapshot, prevChildKey){
+
+       // console.log(childSnapshot.val());
+
+        // assign firebase variables to snapshots.     
+        var firebaseLostFound = childSnapshot.val().lostFound;
+        var firebaseBreed = childSnapshot.val().breed;
+        var firebaseColor = childSnapshot.val().color;
+        var firebaseLocation = childSnapshot.val().location;
+        var firebaseMissingDate = childSnapshot.val().missingDate;
+        var firebaseMissingTime = childSnapshot.val().missingTime;
+        var firebaseContactEmail = childSnapshot.val().contactEmail;
+        var firebaseComment = childSnapshot.val().commentInput;
 
 
+        // Append dog info to table on page
+        $("#dogTable > tbody").append("<tr><td>" + firebaseLostFound + "</td><td>" + firebaseBreed + "</td><td>" + firebaseColor + "</td><td>" + firebaseLocation + "</td><td>" + firebaseMissingDate + "</td><td>" + firebaseMissingTime + "</td><td>" + firebaseContactEmail + "</td><td>" + firebaseComment + "</td></tr>");
 
+    });
+});
 
 var map, infoWindow;
 function initMap() {
