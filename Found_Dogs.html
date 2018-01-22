@@ -62,15 +62,30 @@
   </div>
 
 
-  <div id="content" class="row">
-    <!-- Header - set the background image for the header in the line below -->
-    <div class="jumbotron col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <h1 class="text-center">Search Lost Dogs</h1>
-      <h1 class="text-center">✶ ✶ ✶ ✶</h1>
+      <!-- Header - set the background image for the header in the line below -->
+      <div class="jumbotron col-xs-12 col-sm-12 col-md-12 col-lg-12" id="searchText">
+        <div id="content" class="jumboText">
+          <h1 class="text-center">Search Lost Dogs</h1>
+          <h1 class="text-center">✶ ✶ ✶ ✶</h1>
+        </div>
+      </div>
     </div>
   </div>
 
 
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+      <div id="map"></div>
+      <!-- <div class="map2" id="map2"></div> -->
+    </div>
+  </div>
+</div>
+  <!-- Current Lost Dogs -->
+  <div class="panel panel-info" id="reported">
+   
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">µ
@@ -139,10 +154,6 @@
     <!-- /.container -->
   </footer>
   </div>
-
-
-
-
 
 
   <!-- Bootstrap core JavaScript -->

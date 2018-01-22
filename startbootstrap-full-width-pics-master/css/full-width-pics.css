@@ -284,6 +284,9 @@ button:hover, a:hover {
   #secondDog{
     margin-bottom: -12%;
   }
+  #footerChange{
+    width: 100%;
+  }
 }
 
 
