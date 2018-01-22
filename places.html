@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Google Maps Places API Nearby Example</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+       
+</head>
+
+<body>
+
+    <div style="float: right;">
+        <div id="map" style="width:900px; height:600px;"></div>
+    </div>
+
+    <div style="float: left; width: 400;">
+        <form name="frm_map" id="frm_map">
+            <table>
+                <tr>
+                    <th>Address</th>
+                    <td>
+                        <input type="text" name="address" id="address" value="Chicago, Il">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Radius</th>
+                    <td>
+                        <input type="text" name="radius" id="radius" value="5" placeholder="In KM">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" value="Show" id="submit" onclick="renderMap();">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmmL01G6CzZcoBiA4YJysg_hIEnUTbqss&libraries=places&callback=initialize"
+        async defer></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script src="vets.js"></script>
+
+</body>
+
+</html>
