@@ -85,12 +85,12 @@
           <div class="panel-body">
             <form>
               <div class="container">
-                <h2>Enter Location to Search Local Veterinarians</h2>
+                <h2 style="text-align:center;">Enter a Location to Search Local Veterinarians</h2>
 
                 <form>
                   <div class="form-group">
                     <div style="float: right;">
-                      <div id="map" style="width:900px; height:600px;"></div>
+                      <div id="map" style="width:415px; height:400px;"></div>
                     </div>
 
                     <div style="float: left; width: 400;">
@@ -127,7 +127,7 @@
       </div>
     </div>
   </div>
-  
+
 
 
 
@@ -214,8 +214,9 @@
     <!-- /.container -->
   </footer>
   </div>
-
-
+  <!-- Google API for Vet Locations -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmmL01G6CzZcoBiA4YJysg_hIEnUTbqss&libraries=places&callback=initialize"
+    async defer></script>
   <!-- Bootstrap core JavaScript -->
   <script src="startbootstrap-full-width-pics-master/vendor/jquery/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -227,8 +228,10 @@
   <!-- Moment.js -->
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   <!-- Javascript -->
-<!--   <script src="assets/javascript/main.js"></script> -->
+  <!--   <script src="assets/javascript/main.js"></script> -->
   <script src="assets/javascript/search.js"></script>
+  <!-- Link to Vet JS -->
+  <script src="vets.js"></script>
 
 
 </body>

@@ -100,7 +100,8 @@ button:hover, a:hover {
 
 #searchText{
   width: 100%;
-  margin-top: 5%;
+  margin-top: 2%;
+  margin-left:0%;
 }
 
 #map2{
@@ -291,13 +292,37 @@ button:hover, a:hover {
   #secondDog{
     margin-bottom: -14%;
   }
+
+  #footerChange{
+    width: 115%;
+  }
+
+  #searchText{
+    right:-5%;
+  }
+
+  #map2{
+    top:-59%;
+    right: 8%;
+    
+  }
 }
 
 @media (min-width: 1200px) {
   #secondDog{
     margin-bottom: -12%;
   }
- 
+ #footerChange{
+   width: 100%;
+ }
+
+ #searchText{
+   right: 0%;
+ }
+ #map2{
+   top:-62%;
+   right:0%;
+ }
 }
 
 
