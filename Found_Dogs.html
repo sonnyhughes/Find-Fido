@@ -28,8 +28,8 @@
 
 
   <!--Google Maps API Link-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQplToC7vrZZPdPirJm0clLpN3YbMW6U&callback=initMap" async
-    defer></script>
+<!--   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQplToC7vrZZPdPirJm0clLpN3YbMW6U&callback=initMap" async
+    defer></script> -->
   </body>
 
   <title id="logo">Find Fido</title>
@@ -134,7 +134,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+
 
         <div id="map"></div>
         <!-- <div class="map2" id="map2"></div> -->
@@ -144,7 +144,7 @@
 
 
   <!-- Current Lost Dogs -->
-  <div class="panel panel-info" id="reported">
+<!--   <div class="panel panel-info" id="reported">
 
     <div class="container">
       <div class="row">
@@ -152,13 +152,15 @@
           <div class="map2" id="map2"></div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Current Lost Dogs -->
+
     <div class="panel panel-info" id="reportTable">
       <div class="panel-heading">
         <h2 class="panel-title">
-          <strong>Recently Reported:</strong>
+          <strong>Search Dogs:</strong>
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
         </h2>
       </div>
       <div class="panel-body">
