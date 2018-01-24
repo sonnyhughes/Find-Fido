@@ -146,10 +146,21 @@
                                         <!-- Email Input -->
                                         <div class="form-group">
                                             <label for="userContactEmail" class="control-label">Email Address:</label>
-                                            <input type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="userContactEmail" placeholder="email@email.com" data-error="Please enter a valid email address." required>
+                                            <input type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="userContactEmail" placeholder="email@email.com"
+                                                data-error="Please enter a valid email address." required>
                                             <div class="help-block with-errors"></div>
+                                        </div>  
+                                        <!-- Commment Box -->
+                                        <div class="form-group">
+                                            <label for="comment">Comment:</label>
+                                            <textarea class="form-control" rows="5" id="userComment"></textarea>
                                         </div>
-                                    </form>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-info" id="addDog">Submit</button>
+                                        </div>
+                                        </form>
+                                        <div class="showMap" id="map1">
+                                        </div>
                                 </div>
                             </div>
                         </div>
