@@ -2,240 +2,193 @@
 <html lang="en">
 
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-
-  <link rel="shortcut icon" href="assets/images/redpaw.png" type="image/x-icon">
-
-
-  <!-- Bootstrap core CSS -->
-  <link href="startbootstrap-full-width-pics-master/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Link to use social media icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- map css -->
-  <link rel="stylesheet" href="assets/css/map.css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet" type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
-  <!-- Custom styles for this template -->
-  <link href="startbootstrap-full-width-pics-master/css/full-width-pics.css" rel="stylesheet">
-
-
-  <!--Google Maps API Link-->
-<!--   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQplToC7vrZZPdPirJm0clLpN3YbMW6U&callback=initMap" async
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/images/redpaw.png" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link href="startbootstrap-full-width-pics-master/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to use social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- map css -->
+    <link rel="stylesheet" href="assets/css/map.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet" type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
+    <!-- Custom styles for this template -->
+    <link href="startbootstrap-full-width-pics-master/css/full-width-pics.css" rel="stylesheet">
+    <!--Google Maps API Link-->
+    <!--   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQplToC7vrZZPdPirJm0clLpN3YbMW6U&callback=initMap" async
     defer></script> -->
-  </body>
-
-  <title id="logo">Find Fido</title>
-
-  <style>
+    </body>
+    <title id="logo">Find Fido</title>
+    <style>
     .pac-container {
-      z-index: 10000 !important;
+        z-index: 10000 !important;
     }
-  </style>
-
+    </style>
 </head>
 
 <body>
-
-  <!-- Navigation -->
-  <div id="wrapper">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div id="header" class="container">
-        <div class="row">
-          <div class="col-6">
-            <a class="navbar-brand" href="index.html">Find Fido</a>
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+    <!-- Navigation -->
+    <div id="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div id="header" class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <a class="navbar-brand" href="index.html">Find Fido</a>
+                        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
               aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button> -->
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
-
-
-  <!-- Header - set the background image for the header in the line below -->
-  <div class="jumbotron col-xs-12 col-sm-12 col-md-12 col-lg-12" id="searchText">
-    <div id="content" class="jumboText">
-      <h1 class="text-center">Search Lost Dogs</h1>
-      <h1 class="text-center">✶ ✶ ✶ ✶</h1>
-      <button type="button" class="lost btn btn-info btn-lg vetButton" data-toggle="modal" data-target="#vetModal">Find a Vet</button>
-    </div>
-  </div>
-  </div>
-  </div>
-
-  <!-- Vet Modal Pop up -->
-  <div id="vetModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="panel-body">
-            <form>
-              <div class="container">
-                <h2 style="text-align:center;">Enter a Location to Search Local Veterinarians</h2>
-
-                <form>
-                  <div class="form-group">
-                    <div style="float: right;">
-                      <div id="map" style="width:415px; height:400px;"></div>
                     </div>
-
-                    <div style="float: left; width: 400;">
-                      <form name="frm_map" id="frm_map">
-                        <table>
-                          <tr>
-                            <th>Address:</th>
-                            <td>
-                              <input type="text" class="vetInput" name="address" id="address" placeholder="Chicago, Il">
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>Radius:</th>
-                            <td>
-                              <input type="text" class="vetInput" name="radius" id="radius" placeholder="5">
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td></td>
-                            <td>
-                              <input type="button" value="Show" id="submit" onclick="renderMap();">
-                              <input type="reset" value="Reset">
-                            </td>
-                          </tr>
-                        </table>
-                      </form>
-                    </div>
-                  </div>
-                </form>
-              </div>
-          </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Header - set the background image for the header in the line below -->
+    <div class="jumbotron col-xs-12 col-sm-12 col-md-12 col-lg-12" id="searchText">
+        <div id="content" class="jumboText">
+            <h1 class="text-center">Search Lost Dogs</h1>
+            <h1 class="text-center">✶ ✶ ✶ ✶</h1>
+            <button type="button" class="lost btn btn-info btn-lg vetButton" data-toggle="modal" data-target="#vetModal">Find a Vet</button>
         </div>
-      </div>
     </div>
-  </div>
-
-
-
-
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-
-        <div id="map"></div>
-        <!-- <div class="map2" id="map2"></div> -->
-      </div>
     </div>
-  </div>
-
-
-  <!-- Current Lost Dogs -->
-<!--   <div class="panel panel-info" id="reported">
-
+    </div>
+    <!-- Vet Modal Pop up -->
+    <div id="vetModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="panel-body">
+                        <form>
+                            <div class="container">
+                                <h2 style="text-align:center;">Enter a Location to Search Local Veterinarians</h2>
+                                <form>
+                                    <div class="form-group">
+                                        <div style="float: right;">
+                                            <div id="map" style="width:415px; height:400px;"></div>
+                                        </div>
+                                        <div style="float: left; width: 400;">
+                                            <form name="frm_map" id="frm_map">
+                                                <table>
+                                                    <tr>
+                                                        <th>Address:</th>
+                                                        <td>
+                                                            <input type="text" class="vetInput" name="address" id="address" placeholder="Chicago, Il">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Radius:</th>
+                                                        <td>
+                                                            <input type="text" class="vetInput" name="radius" id="radius" placeholder="5">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>
+                                                            <input type="button" value="Show" id="submit" onclick="renderMap();">
+                                                            <input type="reset" value="Reset">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">µ
-          <div class="map2" id="map2"></div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="map"></div>
+                <!-- <div class="map2" id="map2"></div> -->
+            </div>
         </div>
-      </div>
-    </div> -->
+    </div>
 
     <!-- Current Lost Dogs -->
-
     <div class="panel panel-info" id="reportTable">
-      <div class="panel-heading">
-        <h2 class="panel-title">
+        <div class="panel-heading">
+            <h2 class="panel-title">
           <strong>Search Dogs:</strong>
           <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
         </h2>
-      </div>
-      <div class="panel-body">
-        <table class="table table-hover" id='dogTable'>
-          <thead>
-            <tr>
-              <th>Status</th>
-              <th>Breed</th>
-              <th>Color</th>
-              <th>Location</th>
-              <th>Missing Since</th>
-              <th>Lost Time of Day</th>
-              <th>Please Contact</th>
-              <th>Comments</th>
-            </tr>
-          </thead>
-          <tbody>
-
-          </tbody>
-        </table>
-      </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover" id='dogTable'>
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Breed</th>
+                        <th>Color</th>
+                        <th>Location</th>
+                        <th>Missing Since</th>
+                        <th>Lost Time of Day</th>
+                        <th>Please Contact</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
     </div>
-
-  </div>
-  </div>
-  </div>
-
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark" id="footerChange">
-    <div class="container" id="footer">
-      <div class="row">
-        <div class="col-xs-12 col-md-4 text-center text-white">
-          <p>About</p>
-          <p class="small">Founded in 2018</p>
-          <p class="small">Based in Chicago, IL</p>
-        </div>
-        <div class="col-xs-12 col-md-4 text-center text-white">
-          <p>Contact</p>
-          <p class="small">Email: findfido@fido.com</p>
-          <p class="small">Phone: 1-800-555-PETS</p>
-        </div>
-        <div class="col-xs-12 col-md-4 text-center text-white">
-          <p>Resources</p>
-          <p class="small">Google</p>
-          <p class="small">Petfinder</p>
-
-        </div>
-
-      </div>
-      <!-- <p class="m-0 text-center text-white">&copy; Northwestern University 2018</p> -->
     </div>
-    <!-- /.container -->
-  </footer>
+    </div>
+    </div>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark" id="footerChange">
+        <div class="container" id="footer">
+            <div class="row">
+                <div class="col-xs-12 col-md-4 text-center text-white">
+                    <p>About</p>
+                    <p class="small">Founded in 2018</p>
+                    <p class="small">Based in Chicago, IL</p>
+                </div>
+                <div class="col-xs-12 col-md-4 text-center text-white">
+                    <p>Contact</p>
+                    <p class="small">Email: findfido@fido.com</p>
+                    <p class="small">Phone: 1-800-555-PETS</p>
+                </div>
+                <div class="col-xs-12 col-md-4 text-center text-white">
+                    <p>Resources</p>
+                    <p class="small">Google</p>
+                    <p class="small">Petfinder</p>
+                </div>
+            </div>
+        </div>
+    </footer>
   </div>
-  <!-- Google API for Vet Locations -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmmL01G6CzZcoBiA4YJysg_hIEnUTbqss&libraries=places&callback=initialize"
-    async defer></script>
-  <!-- Bootstrap core JavaScript -->
-  <script src="startbootstrap-full-width-pics-master/vendor/jquery/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script src="startbootstrap-full-width-pics-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- /.container -->
 
-  <!-- Firebase -->
-  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-  <!-- Moment.js -->
-  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-  <!-- Javascript -->
-  <!--   <script src="assets/javascript/main.js"></script> -->
-  <script src="assets/javascript/search.js"></script>
-  <!-- Link to Vet JS -->
-  <script src="vets.js"></script>
-
-
+    <!-- Google API for Vet Locations -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmmL01G6CzZcoBiA4YJysg_hIEnUTbqss&libraries=places&callback=initialize" async defer></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="startbootstrap-full-width-pics-master/vendor/jquery/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="startbootstrap-full-width-pics-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+    <!-- Moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Javascript -->
+    <!--   <script src="assets/javascript/main.js"></script> -->
+    <script src="assets/javascript/search.js"></script>
+    <!-- Link to Vet JS -->
+    <script src="assets/javascript/vets.js"></script>
 </body>
 
 </html>
