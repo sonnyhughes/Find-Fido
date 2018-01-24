@@ -17,10 +17,9 @@ $(document).ready(function(){
 
     google.maps.event.addDomListener(window, 'load', init);
 
-
     // Button to add Dogs
     $("#addDog").on("click", function(){
-
+       
         // Parses input values and attaches them to a variable      
         var LostFoundInput = $("#dogLostFoundInput").val().trim();
         var BreedInput = $("#dogBreedInput").val().trim();
