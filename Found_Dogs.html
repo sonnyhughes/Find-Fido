@@ -3,20 +3,26 @@
 
 <head>
 
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
-
   <link rel="shortcut icon" href="assets/images/redpaw.png" type="image/x-icon">
-
-
-  <!-- Bootstrap core CSS -->
+  
+    <!-- Bootstrap core CSS -->
   <link href="startbootstrap-full-width-pics-master/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Link to use social media icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Google API for Vet Locations -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmmL01G6CzZcoBiA4YJysg_hIEnUTbqss&libraries=places&callback=initialize"
+    async defer></script>
+
+ 
+
+
+  
   <!-- map css -->
   <link rel="stylesheet" href="assets/css/map.css">
 
@@ -27,17 +33,25 @@
   <!-- Custom styles for this template -->
   <link href="startbootstrap-full-width-pics-master/css/full-width-pics.css" rel="stylesheet">
 
+  <!-- Bootstrap core JavaScript -->
+  <script src="startbootstrap-full-width-pics-master/vendor/jquery/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="startbootstrap-full-width-pics-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+  
+  <!-- Moment.js -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
   <!--Google Maps API Link-->
-  <!--   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQplToC7vrZZPdPirJm0clLpN3YbMW6U&callback=initMap" async
-    defer></script> -->
-    </body>
-    <title id="logo">Find Fido</title>
-    <style>
+<!--     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQplToC7vrZZPdPirJm0clLpN3YbMW6U&callback=initMap" async defer></script> -->
+  <title id="logo">Find Fido</title>
+  <style>
     .pac-container {
         z-index: 10000 !important;
     }
-    </style>
+  </style>
 </head>
 
 <body>
@@ -186,23 +200,12 @@
     </div>
   </footer>
 
-  <!-- Google API for Vet Locations -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmmL01G6CzZcoBiA4YJysg_hIEnUTbqss&libraries=places&callback=initialize"
-    async defer></script>
-  <!-- Bootstrap core JavaScript -->
-  <script src="startbootstrap-full-width-pics-master/vendor/jquery/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script src="startbootstrap-full-width-pics-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Firebase -->
-  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-  <!-- Moment.js -->
-  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
   <!-- Javascript -->
   <script src="assets/javascript/search.js"></script>
   <!-- Link to Vet JS -->
-  <script src="vets.js"></script>
+  <script src="assets/javascript/vets.js"></script>
 
 </body>
 </html>
