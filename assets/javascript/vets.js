@@ -1,11 +1,11 @@
-$(document).ready(function () {
+$(document).ready(function() {
     // type_holder
     // <div><label><input type="checkbox" class="types" value="mosque" />Mosque</label></div>
 
     var types = ['veterinary_care'];
     var html = '';
 
-    $.each(types, function (index, value) {
+    $.each(types, function(index, value) {
         var name = value.replace(/_/g, " ");
         html += '<div><label><input type="checkbox" class="types" value="' + value + '" />' + capitalizeFirstLetter(name) + '</label></div>';
     });
@@ -44,7 +44,7 @@ function renderMap() {
 
     // get the selected type
     selectedTypes = ["veterinary_care"];
-    $('.types').each(function () {
+    $('.types').each(function() {
         if ($(this).is(':checked')) {
             selectedTypes.push($(this).val());
         }
@@ -54,7 +54,7 @@ function renderMap() {
     var selLocLat = 0;
     var selLocLng = 0;
 
-    geocoder.geocode({ 'address': address }, function (results, status) {
+    geocoder.geocode({ 'address': address }, function(results, status) {
         if (status === 'OK') {
             //console.log(results[0].geometry.location.lat() + ' - ' + results[0].geometry.location.lng());
 
@@ -84,8 +84,7 @@ function renderMap() {
 
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch(request, callback);
-        }
-        else {
+        } else {
             alert('Geocode was not successful for the following reason: ' + status);
         }
     });
@@ -112,9 +111,8 @@ function createMarker(place, icon) {
         animation: google.maps.Animation.DROP
     });
 
-    google.maps.event.addListener(marker, 'click', function () {
+    google.maps.event.addListener(marker, 'click', function() {
         infowindow.setContent(place.name + '<br>' + place.vicinity);
         infowindow.open(map, this);
     });
 }
-  
