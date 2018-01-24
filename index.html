@@ -67,100 +67,94 @@
         </header>
         <!-- Modal -->
         <div id="myModal" class="modal fade" role="dialog">
-
-          <div class="modal-dialog">
-
-
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
-              <div class="modal-body">
-
-                <!-- Report Missing Dog Form-->
-                <!-- Submission form for new dogs -->
-                <div class="panel-body" id="formDiv">
-                  <form data-toggle="validator" role="form" id="dogForm">
-
-                    <div class="container">
-                      <h2>Submission Form</h2>
-                    
-                      <form>
-                        <div class="form-group">
-                              <!-- Lost or Found Input -->
-                          <label for="dogLostFoundInput">Are you reporting a lost or found animal:</label>
-                          <select class="form-control" id="dogLostFoundInput">
-                            <option>Lost</option>
-                            <option>Found</option>
-                          </select>
-                          </div>
-                          <!-- Breed Input -->
-                          <div class="form-group">
-                          <label for="dogBreedInput">Breed:</label>
-                          <select class="form-control" id="dogBreedInput">
-                            <option>Bulldog</option>
-                            <option>Cattle Dog</option>
-                            <option>Chihuahua</option>
-                            <option>Hound</option>
-                            <option>Husky</option>
-                            <option>Mastiff</option>
-                            <option>Pomeranian</option>
-                            <option>Poodle</option>
-                            <option>Retriever</option>
-                            <option>Shepherd</option>
-                            <option>Shih Tzu</option>
-                            <option>Spaniel</option>
-                            <option>Terrier</option>
-                          </select>
-                          </div>
-                          <!-- Color Input -->
-                          <div class="form-group">
-                          <label for="dogColorInput">Color:</label>
-                          <select class="form-control" id="dogColorInput">
-                            <option>Brown</option>
-                            <option>Black</option>
-                            <option>White</option>
-                            <option>Red</option>
-                            <option>Gray</option>
-                          </select>
-                          </div>
-                          <!-- Size Input -->
-                          <div class="form-group">
-                          <label for="dogWeightInput">Size:</label>
-                          <select class="form-control" id="dogWeightInput">
-                            <option>Small</option>
-                            <option>Medium</option>
-                            <option>Large</option>
-                          </select>
-                          </div>
-                          <!-- Location Input -->
-                          <div class="form-group">
-                            <label for="dogLocationInput">Last Known Location:</label>
-                            <input type="text" class="form-control" id="addr" value="Chicago,Il" placeholder="Location (Address or Place)">
-                          </div>
-                          <!-- Missing Date Input -->
-                          <div class="form-group">
-                          <label for="dogMissingDateInput">Missing Since (Date):</label>
-                          <input type="date" class="form-control" placeholder="MM/DD/YY" id="dogMissingDateInput">
-                          </div>
-                          <!-- Missing Time Input -->
-                          <div class="form-group">
-                          <label for="dogMissingTimeInput">Missing Since (Time of Day):</label>
-                          <select class="form-control" id="dogMissingTimeInput">
-                            <option>Morning</option>
-                            <option>Afternoon</option>
-                            <option>Evening</option>
-                          </select>
-                          </div>
-                          <!-- Email Input -->
-                          <div class="form-group">
-                              <label for="userContactEmail" class="control-label">Email Address:</label>
-                              <input type="email"  class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="userContactEmail" placeholder="email@email.com" data-error="Please enter a valid email address." required>
-                              <div class="help-block with-errors"></div>
-                            </div>
-                        <!-- Drop image -->
-                        <!-- <div class="dz-preview dz-file-preview">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Report Missing Dog Form-->
+                        <!-- Submission form for new dogs -->
+                        <div class="panel-body" id="formDiv">
+                            <form data-toggle="validator" role="form" id="dogForm">
+                                <div class="container">
+                                    <h2>Submission Form</h2>
+                                    <form>
+                                        <div class="form-group">
+                                            <!-- Lost or Found Input -->
+                                            <label for="dogLostFoundInput">Are you reporting a lost or found animal:</label>
+                                            <select class="form-control" id="dogLostFoundInput">
+                                                <option>Lost</option>
+                                                <option>Found</option>
+                                            </select>
+                                        </div>
+                                        <!-- Breed Input -->
+                                        <div class="form-group">
+                                            <label for="dogBreedInput">Breed:</label>
+                                            <select class="form-control" id="dogBreedInput">
+                                                <option>Bulldog</option>
+                                                <option>Cattle Dog</option>
+                                                <option>Chihuahua</option>
+                                                <option>Hound</option>
+                                                <option>Husky</option>
+                                                <option>Mastiff</option>
+                                                <option>Pomeranian</option>
+                                                <option>Poodle</option>
+                                                <option>Retriever</option>
+                                                <option>Shepherd</option>
+                                                <option>Shih Tzu</option>
+                                                <option>Spaniel</option>
+                                                <option>Terrier</option>
+                                            </select>
+                                        </div>
+                                        <!-- Color Input -->
+                                        <div class="form-group">
+                                            <label for="dogColorInput">Color:</label>
+                                            <select class="form-control" id="dogColorInput">
+                                                <option>Brown</option>
+                                                <option>Black</option>
+                                                <option>White</option>
+                                                <option>Red</option>
+                                                <option>Gray</option>
+                                            </select>
+                                        </div>
+                                        <!-- Size Input -->
+                                        <div class="form-group">
+                                            <label for="dogWeightInput">Size:</label>
+                                            <select class="form-control" id="dogWeightInput">
+                                                <option>Small</option>
+                                                <option>Medium</option>
+                                                <option>Large</option>
+                                            </select>
+                                        </div>
+                                        <!-- Location Input -->
+                                        <div class="form-group">
+                                            <label for="dogLocationInput">Last Known Location:</label>
+                                            <input type="text" class="form-control" id="addr" value="Chicago,Il" placeholder="Location (Address or Place)">
+                                        </div>
+                                        <!-- Missing Date Input -->
+                                        <div class="form-group">
+                                            <label for="dogMissingDateInput">Missing Since (Date):</label>
+                                            <input type="date" class="form-control" placeholder="MM/DD/YY" id="dogMissingDateInput">
+                                        </div>
+                                        <!-- Missing Time Input -->
+                                        <div class="form-group">
+                                            <label for="dogMissingTimeInput">Missing Since (Time of Day):</label>
+                                            <select class="form-control" id="dogMissingTimeInput">
+                                                <option>Morning</option>
+                                                <option>Afternoon</option>
+                                                <option>Evening</option>
+                                            </select>
+                                        </div>
+                                        <!-- Email Input -->
+                                        <div class="form-group">
+                                            <label for="userContactEmail" class="control-label">Email Address:</label>
+                                            <input type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="userContactEmail" placeholder="email@email.com" data-error="Please enter a valid email address." required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <!-- Drop image -->
+                                        <!-- <div class="dz-preview dz-file-preview">
                           <div class="dz-details">
                             <div class="dz-filename">
                               <span data-dz-name></span>
@@ -173,103 +167,103 @@
         </div>
     </div>
     <!-- Content section -->
-    <section class="py-5">
-        <div class="container">
-            <h1>Mission Statement</h1>
-            <p class="lead">What do you do when you've lost an important furry family member?</p>
-            <p>Find Fido makes it easy to report a lost pet, search for a missing pet, and report a found animal in your area.</p>
-            <p>Easily upload location and pet identification information to ease the process of reuniting families and lost animals.</p>
-            <p>Begin your search by clicking the appropriate option above.</p>
-        </div>
-    </section>
-    <!-- Image Section - set the background image for the header in the line below -->
-    <section class="py-5 bg-image-full" id="secondDog" style="background-image: url('https://media.guim.co.uk/ffa8c270e3a2a074d853cf5c5d7ca6080ba1077a/0_178_5374_3226/1000.jpg');">
-        <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
-        <div style="height: 200px;"></div>
-    </section>
-    <!-- Second content section -->
-    <section class="py-5">
-        <div class="container" id="userReviews">
-            <!-- User Experience Section -->
-            <h3>Your Experience Matters to Us</h3>
-            <p></p>
-            <div class="row">
-                <div class="col-xs-12 col-md-4">
-                    <p>Sarah Smith: Lakeview, Chicago</p>
-                    <p>&starf; &starf; &starf; &starf; &starf;</p>
-                    <p>My dog was lost one night in January, and I thought I'd never see her again. I feel so lucky to have used Find Fido, where I reported my dog and was able to contact the person who found her in less than 45 minutes. I wish this existed in other cities!
-                    </p>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <p>Luke Lawrence: Gold Coast, Chicago</p>
-                    <p>&starf; &starf; &starf; &starf; &starf;</p>
-                    <p>Wow! I can't believe this hasn't ever been done before. My dog, Ralph, was lost during the 4th of July parade and I thought I was doomed. I posted his photo on the site and located him within 24 hours at a nearby school. Great site.
-                    </p>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <p>Jenny Jones: Logan Square, Chicago</p>
-                    <p>&starf; &starf; &starf; &starf; &star;</p>
-                    <p>Find Fido is a worthwhile site to follow. I check here every day for lost pets in my area. Four stars because this doesn't exist for cats yet.
-                    </p>
-                </div>
-            </div>
-            <!-- Social Media Icon Input -->
-            <div class="row">
-                <div class="col-xs-12 text-center social">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-google"></a>
-                    <a href="#" class="fa fa-linkedin"></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    </div>
-    <!-- Footer -->
-    <footer class="py-5 bg-dark" id="footerChange">
-        <div class="container" id="footer">
-            <div class="row">
-                <div class="col-xs-12 col-md-4 text-center text-white">
-                    <p>About</p>
-                    <p class="small">Founded in 2018</p>
-                    <p class="small">Based in Chicago, IL</p>
-                </div>
-                <div class="col-xs-12 col-md-4 text-center text-white">
-                    <p>Contact</p>
-                    <p class="small">Email: findfido@fido.com</p>
-                    <p class="small">Phone: 1-800-555-PETS</p>
-                </div>
-                <div class="col-xs-12 col-md-4 text-center text-white">
-                    <p>Resources</p>
-                    <p class="small">Google</p>
-                    <p class="small">Petfinder</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    </div>
-    <!-- Bootstrap core JavaScript -->
-    <script src="startbootstrap-full-width-pics-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Firebase 2.4.1 for the database push and rest of app-->
-    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-    <!-- Moment.js -->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <!-- Javascript -->
-    <script src="assets/javascript/main.js"></script>
-    <!-- Firebase 3.7.4 for the storage push-->
-    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
-    <!-- Initialize Firebase -->
-    <script>
-    var config = {
-        apiKey: "AIzaSyCY_YbuxtgsKPyTNvN0cnzCAWHr51RMJ84",
-        authDomain: "nwuproject1.firebaseapp.com",
-        databaseURL: "https://nwuproject1.firebaseio.com",
-        projectId: "nwuproject1",
-        storageBucket: "nwuproject1.appspot.com",
-        messagingSenderId: "218962101512"
-    };
-    firebase.initializeApp(config);
-    </script>
+                                        <section class="py-5">
+                                            <div class="container">
+                                                <h1>Mission Statement</h1>
+                                                <p class="lead">What do you do when you've lost an important furry family member?</p>
+                                                <p>Find Fido makes it easy to report a lost pet, search for a missing pet, and report a found animal in your area.</p>
+                                                <p>Easily upload location and pet identification information to ease the process of reuniting families and lost animals.</p>
+                                                <p>Begin your search by clicking the appropriate option above.</p>
+                                            </div>
+                                        </section>
+                                        <!-- Image Section - set the background image for the header in the line below -->
+                                        <section class="py-5 bg-image-full" id="secondDog" style="background-image: url('https://media.guim.co.uk/ffa8c270e3a2a074d853cf5c5d7ca6080ba1077a/0_178_5374_3226/1000.jpg');">
+                                            <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
+                                            <div style="height: 200px;"></div>
+                                        </section>
+                                        <!-- Second content section -->
+                                        <section class="py-5">
+                                            <div class="container" id="userReviews">
+                                                <!-- User Experience Section -->
+                                                <h3>Your Experience Matters to Us</h3>
+                                                <p></p>
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-md-4">
+                                                        <p>Sarah Smith: Lakeview, Chicago</p>
+                                                        <p>&starf; &starf; &starf; &starf; &starf;</p>
+                                                        <p>My dog was lost one night in January, and I thought I'd never see her again. I feel so lucky to have used Find Fido, where I reported my dog and was able to contact the person who found her in less than 45 minutes. I wish this existed in other cities!
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-xs-12 col-md-4">
+                                                        <p>Luke Lawrence: Gold Coast, Chicago</p>
+                                                        <p>&starf; &starf; &starf; &starf; &starf;</p>
+                                                        <p>Wow! I can't believe this hasn't ever been done before. My dog, Ralph, was lost during the 4th of July parade and I thought I was doomed. I posted his photo on the site and located him within 24 hours at a nearby school. Great site.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-xs-12 col-md-4">
+                                                        <p>Jenny Jones: Logan Square, Chicago</p>
+                                                        <p>&starf; &starf; &starf; &starf; &star;</p>
+                                                        <p>Find Fido is a worthwhile site to follow. I check here every day for lost pets in my area. Four stars because this doesn't exist for cats yet.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <!-- Social Media Icon Input -->
+                                                <div class="row">
+                                                    <div class="col-xs-12 text-center social">
+                                                        <a href="#" class="fa fa-facebook"></a>
+                                                        <a href="#" class="fa fa-twitter"></a>
+                                                        <a href="#" class="fa fa-google"></a>
+                                                        <a href="#" class="fa fa-linkedin"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                </div>
+                                <!-- Footer -->
+                                <footer class="py-5 bg-dark" id="footerChange">
+                                    <div class="container" id="footer">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-4 text-center text-white">
+                                                <p>About</p>
+                                                <p class="small">Founded in 2018</p>
+                                                <p class="small">Based in Chicago, IL</p>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 text-center text-white">
+                                                <p>Contact</p>
+                                                <p class="small">Email: findfido@fido.com</p>
+                                                <p class="small">Phone: 1-800-555-PETS</p>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4 text-center text-white">
+                                                <p>Resources</p>
+                                                <p class="small">Google</p>
+                                                <p class="small">Petfinder</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </footer>
+                        </div>
+                        <!-- Bootstrap core JavaScript -->
+                        <script src="startbootstrap-full-width-pics-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                        <!-- Firebase 2.4.1 for the database push and rest of app-->
+                        <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+                        <!-- Moment.js -->
+                        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+                        <!-- Javascript -->
+                        <script src="assets/javascript/main.js"></script>
+                        <!-- Firebase 3.7.4 for the storage push-->
+                        <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+                        <!-- Initialize Firebase -->
+                        <script>
+                        var config = {
+                            apiKey: "AIzaSyCY_YbuxtgsKPyTNvN0cnzCAWHr51RMJ84",
+                            authDomain: "nwuproject1.firebaseapp.com",
+                            databaseURL: "https://nwuproject1.firebaseio.com",
+                            projectId: "nwuproject1",
+                            storageBucket: "nwuproject1.appspot.com",
+                            messagingSenderId: "218962101512"
+                        };
+                        firebase.initializeApp(config);
+                        </script>
 </body>
 
 </html>
