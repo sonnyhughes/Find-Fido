@@ -124,6 +124,8 @@ button:hover, a:hover {
 
 #reportTable{
   margin-top: -30%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 /* Vet Modal Styling */
@@ -137,7 +139,7 @@ button:hover, a:hover {
   margin-top: 1%;
 }
 
-			
+/*Footer Styling  */
 #footerChange{
   width: 100%;
   margin-top: 10%;
@@ -255,6 +257,10 @@ button:hover, a:hover {
     padding: 2%;
     width: 100%;
   }
+
+/* #searchText{
+  margin-left: 3%;
+} */
 
 }
 

@@ -11,16 +11,18 @@
   <link rel="shortcut icon" href="assets/images/redpaw.png" type="image/x-icon">
 
 
-
   <!-- Bootstrap core CSS -->
   <link href="startbootstrap-full-width-pics-master/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap jQuery -->
+  <script src="startbootstrap-full-width-pics-master/vendor/jquery/jquery.min.js"></script>
+  <!-- Bootstrap CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
 
   <!-- Link to use social media icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet" type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
@@ -71,19 +73,18 @@
 
     
     <header class="py-5 bg-image-full" id="firstDog" style="background-image: url('https://timedotcom.files.wordpress.com/2017/07/owning-dog-happy.jpg');">
-     
-      <!-- <div class="btn-group"> -->
-      <!-- buttons/links directing to lost and found pages -->
+       <!-- buttons/links directing to lost and found pages -->
       <div id="lostandfound">
-        <!-- <a class="lost" href="Lost2.html">Report</a> -->
         <button type="button" class="lost btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Report</button>
         <a class="found" href="Found_Dogs.html">Search</a>
-        
- <!--        <label class="found">
+<!--         
+        <label class="found">
           <input id="fileButton" type="file" value= "upload" style="display:none;">
             Upload Image
-        </label> -->
-      </div>
+        </label>
+      -->
+    </div>
+    </header>
         <!-- Modal -->
         <div id="myModal" class="modal fade" role="dialog">
           <div class="modal-dialog">
@@ -98,8 +99,8 @@
 
                 <!-- Report Missing Dog Form-->
                 <!-- Submission form for new dogs -->
-                <div class="panel-body">
-                  <form>
+                <div class="panel-body" id="formDiv">
+                  <form data-toggle="validator" role="form" id="dogForm">
 
                     <div class="container">
                       <h2>Submission Form</h2>
@@ -112,7 +113,9 @@
                             <option>Lost</option>
                             <option>Found</option>
                           </select>
+                          </div>
                           <!-- Breed Input -->
+                          <div class="form-group">
                           <label for="dogBreedInput">Breed:</label>
                           <select class="form-control" id="dogBreedInput">
                             <option>Bulldog</option>
@@ -129,7 +132,9 @@
                             <option>Spaniel</option>
                             <option>Terrier</option>
                           </select>
+                          </div>
                           <!-- Color Input -->
+                          <div class="form-group">
                           <label for="dogColorInput">Color:</label>
                           <select class="form-control" id="dogColorInput">
                             <option>Brown</option>
@@ -138,36 +143,43 @@
                             <option>Red</option>
                             <option>Gray</option>
                           </select>
+                          </div>
                           <!-- Size Input -->
+                          <div class="form-group">
                           <label for="dogWeightInput">Size:</label>
                           <select class="form-control" id="dogWeightInput">
                             <option>Small</option>
                             <option>Medium</option>
                             <option>Large</option>
                           </select>
+                          </div>
                           <!-- Location Input -->
                           <div class="form-group">
                             <label for="dogLocationInput">Last Known Location:</label>
                             <input type="text" class="form-control" id="addr" value="Chicago,Il" placeholder="Location (Address or Place)">
                           </div>
                           <!-- Missing Date Input -->
+                          <div class="form-group">
                           <label for="dogMissingDateInput">Missing Since (Date):</label>
                           <input type="text" class="form-control" placeholder="MM/DD/YY" id="dogMissingDateInput">
-                          
+                          </div>
                           <!-- Missing Time Input -->
+                          <div class="form-group">
                           <label for="dogMissingTimeInput">Missing Since (Time of Day):</label>
                           <select class="form-control" id="dogMissingTimeInput">
                             <option>Morning</option>
                             <option>Afternoon</option>
                             <option>Evening</option>
                           </select>
-                          
+                          </div>
                           <!-- Email Input -->
-                         <label for="userContactEmail">Email Address:</label>
-                         <input type="text" class="form-control" placeholder="email@email.com" id="userContactEmail">
-
+                          <div class="form-group">
+                              <label for="userContactEmail" class="control-label">Email Address:</label>
+                              <input type="email"  class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="userContactEmail" placeholder="email@email.com" data-error="Please enter a valid email address." required>
+                              <div class="help-block with-errors"></div>
+                            </div>
                         <!-- Drop image -->
-                        <div class="dz-preview dz-file-preview">
+                        <!-- <div class="dz-preview dz-file-preview">
                           <div class="dz-details">
                             <div class="dz-filename">
                               <span data-dz-name></span>
@@ -187,15 +199,18 @@
                           <div class="dz-error-message">
                             <span data-dz-errormessage></span>
                           </div>
-                        </div>
+                        </div> -->
                         
                           <!-- Commment Box -->
+                          <div class="form-group">
                           <label for="comment">Comment:</label>
                           <textarea class="form-control" rows="5" id="userComment"></textarea>
                         </div>
                       </form>
                     </div>
+                  <div class="form-group">
                     <button type="submit" class="btn btn-info" id="addDog">Submit</button>
+                    </div>
                   </form>
                   <div class="showMap" id="map1">
                   </div>
@@ -208,19 +223,6 @@
           </div>
         </div>
       </div>
-  </div>
-  </div>
-
-  </div>
-
-  </div>
-
-  </div>
-  </div>
-
-  </div>
-  </header>
-
 
   <!-- Content section -->
   <section class="py-5">
@@ -307,14 +309,14 @@
         </div>
 
       </div>
-      <!-- <p class="m-0 text-center text-white">&copy; Northwestern University 2018</p> -->
+ 
     </div>
-    <!-- /.container -->
+
   </footer>
   </div>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="startbootstrap-full-width-pics-master/vendor/jquery/jquery.min.js"></script>
+  
   <script src="startbootstrap-full-width-pics-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Firebase 2.4.1 for the database push and rest of app-->
   <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
