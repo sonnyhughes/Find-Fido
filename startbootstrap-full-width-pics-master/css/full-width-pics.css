@@ -89,6 +89,17 @@ button:hover, a:hover {
   left: -14%;
 }
 
+#map{
+width: 415px;
+height:400px;
+padding-bottom: 2%;
+}
+
+.modalHeader{
+  text-align:center;
+  font-size:20px; 
+  margin-top: -4%;
+}
 
 #userReviews{
   margin-bottom: -15%;
@@ -200,10 +211,7 @@ button:hover, a:hover {
     margin-bottom:3%;
   }
 
-  /* .row{
-    margin-right:-281px;
-  } */
-  .lost, .found{
+ .lost, .found{
     width: 23%;
   }
   #firstDog{
@@ -238,7 +246,6 @@ button:hover, a:hover {
   .navbar-brand{
     margin-bottom:3%;
   }
-
  
   .lost, .found{
     width: 23%;
@@ -257,10 +264,6 @@ button:hover, a:hover {
     padding: 2%;
     width: 100%;
   }
-
-/* #searchText{
-  margin-left: 3%;
-} */
 
 }
 
