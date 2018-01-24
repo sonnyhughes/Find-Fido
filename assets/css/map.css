@@ -1,35 +1,33 @@
 #map {
-        height: 400px;
-      }
-      .pac-container {
-      z-index: 10000 !important;
-    }
+    height: 400px;
+}
+
+.pac-container {
+    z-index: 10000 !important;
+}
 
 iframe {
-  display: block;
-  margin: auto;
+    display: block;
+    margin: auto;
 }
 
 .map {
-  border: 1px solid #ccc;
-  background-color: #efefef;
-  height: 300px;
-  margin-top: 20px;
+    border: 1px solid #ccc;
+    background-color: #efefef;
+    height: 300px;
+    margin-top: 20px;
 }
 
-#addr{
-  width: 100%;
+#addr {
+    width: 100%;
 }
+
 
 
 /* found page css */
 
 .map2 {
-  height: 400px;
-  width: 100%;
-  margin-bottom: 30px;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 30px;
 }
-
-
-
-

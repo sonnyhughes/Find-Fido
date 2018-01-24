@@ -1,5 +1,3 @@
-
-
 //This is for the auto complete form
 
 function init() {

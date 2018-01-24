@@ -2,91 +2,72 @@
 <html lang="en">
 
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <link rel="shortcut icon" href="assets/images/redpaw.png" type="image/x-icon">
-
-
-  <!-- Bootstrap core CSS -->
-  <link href="startbootstrap-full-width-pics-master/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap jQuery -->
-  <script src="startbootstrap-full-width-pics-master/vendor/jquery/jquery.min.js"></script>
-  <!-- Bootstrap CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
-
-  <!-- Link to use social media icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet" type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
-
-  <!-- Custom styles for this template -->
-  <link href="startbootstrap-full-width-pics-master/css/full-width-pics.css" rel="stylesheet">
-
-  <script src="assets/javascript/dropzone.js"></script>
- 
-
-  <!-- map css  -->
-  <link rel="stylesheet" href="assets/css/map.css">
-
-  <!--Google Maps API Link-->
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQplToC7vrZZPdPirJm0clLpN3YbMW6U&libraries=places"></script>
-  
-
-  <title id="logo">Find Fido</title>
-
-  <style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/images/redpaw.png" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link href="startbootstrap-full-width-pics-master/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap jQuery -->
+    <script src="startbootstrap-full-width-pics-master/vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
+    <!-- Link to use social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet" type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
+    <!-- Custom styles for this template -->
+    <link href="startbootstrap-full-width-pics-master/css/full-width-pics.css" rel="stylesheet">
+    <script src="assets/javascript/dropzone.js"></script>
+    <!-- map css  -->
+    <link rel="stylesheet" href="assets/css/map.css">
+    <!--Google Maps API Link-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQplToC7vrZZPdPirJm0clLpN3YbMW6U&libraries=places"></script>
+    <title id="logo">Find Fido</title>
+    <style>
     .pac-container {
-      z-index: 10000 !important;
+        z-index: 10000 !important;
     }
-  </style>
-
+    </style>
 </head>
 
 <body>
-
-  <!-- Navigation -->
-  <div id="wrapper">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div id="header" class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <a class="navbar-brand" href="index.html">Find Fido</a>
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+    <!-- Navigation -->
+    <div id="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div id="header" class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a class="navbar-brand" href="index.html">Find Fido</a>
+                        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
               aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button> -->
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
-  
-
-  <div id="content">
-    <!-- Header - set the background image for the header in the line below -->
-
-    
-    <header class="py-5 bg-image-full" id="firstDog" style="background-image: url('https://timedotcom.files.wordpress.com/2017/07/owning-dog-happy.jpg');">
-       <!-- buttons/links directing to lost and found pages -->
-      <div id="lostandfound">
-        <button type="button" class="lost btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Report</button>
-        <a class="found" href="Found_Dogs.html">Search</a>
-<!--         
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="content">
+        <!-- Header - set the background image for the header in the line below -->
+        <header class="py-5 bg-image-full" id="firstDog" style="background-image: url('https://timedotcom.files.wordpress.com/2017/07/owning-dog-happy.jpg');">
+            <!-- buttons/links directing to lost and found pages -->
+            <div id="lostandfound">
+                <button type="button" class="lost btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Report</button>
+                <a class="found" href="Found_Dogs.html">Search</a>
+                <!--         
         <label class="found">
           <input id="fileButton" type="file" value= "upload" style="display:none;">
             Upload Image
         </label>
       -->
-    </div>
-    </header>
+            </div>
+        </header>
         <!-- Modal -->
         <div id="myModal" class="modal fade" role="dialog">
+
           <div class="modal-dialog">
 
 
@@ -183,161 +164,112 @@
                           <div class="dz-details">
                             <div class="dz-filename">
                               <span data-dz-name></span>
+
                             </div>
-                            <div class="dz-size" data-dz-size></div>
-                            <img data-dz-thumbnail />
-                          </div>
-                          <div class="dz-progress">
-                            <span class="dz-upload" data-dz-uploadprogress></span>
-                          </div>
-                          <div class="dz-success-mark">
-                            <span>✔</span>
-                          </div>
-                          <div class="dz-error-mark">
-                            <span>✘</span>
-                          </div>
-                          <div class="dz-error-message">
-                            <span data-dz-errormessage></span>
-                          </div>
-                        </div> -->
-                        
-                          <!-- Commment Box -->
-                          <div class="form-group">
-                          <label for="comment">Comment:</label>
-                          <textarea class="form-control" rows="5" id="userComment"></textarea>
                         </div>
-                      </form>
                     </div>
-                  <div class="form-group">
-                    <button type="submit" class="btn btn-info" id="addDog">Submit</button>
-                    </div>
-                  </form>
-                  <div class="showMap" id="map1">
-                  </div>
                 </div>
-
-              </div>
-
             </div>
-
-          </div>
         </div>
-      </div>
-
-  <!-- Content section -->
-  <section class="py-5">
-    <div class="container">
-      <h1>Mission Statement</h1>
-      <p class="lead">What do you do when you've lost an important furry family member?</p>
-      <p>Find Fido makes it easy to report a lost pet, search for a missing pet, and report a found animal in your area.</p>
-      <p>Easily upload location and pet identification information to ease the process of reuniting families and lost animals.</p>
-      <p>Begin your search by clicking the appropriate option above.</p>
     </div>
-  </section>
-
-  <!-- Image Section - set the background image for the header in the line below -->
-  <section class="py-5 bg-image-full" id="secondDog" style="background-image: url('https://media.guim.co.uk/ffa8c270e3a2a074d853cf5c5d7ca6080ba1077a/0_178_5374_3226/1000.jpg');">
-    <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
-    <div style="height: 200px;"></div>
-  </section>
-
-
-
-  <!-- Second content section -->
-  <section class="py-5">
-    <div class="container" id="userReviews">
-
-      <!-- User Experience Section -->
-      <h3>Your Experience Matters to Us</h3>
-      <p></p>
-      <div class="row">
-        <div class="col-xs-12 col-md-4">
-          <p>Sarah Smith: Lakeview, Chicago</p>
-          <p>&starf; &starf; &starf; &starf; &starf;</p>
-          <p>My dog was lost one night in January, and I thought I'd never see her again. I feel so lucky to have used Find
-            Fido, where I reported my dog and was able to contact the person who found her in less than 45 minutes. I wish
-            this existed in other cities!
-          </p>
+    <!-- Content section -->
+    <section class="py-5">
+        <div class="container">
+            <h1>Mission Statement</h1>
+            <p class="lead">What do you do when you've lost an important furry family member?</p>
+            <p>Find Fido makes it easy to report a lost pet, search for a missing pet, and report a found animal in your area.</p>
+            <p>Easily upload location and pet identification information to ease the process of reuniting families and lost animals.</p>
+            <p>Begin your search by clicking the appropriate option above.</p>
         </div>
-        <div class="col-xs-12 col-md-4">
-          <p>Luke Lawrence: Gold Coast, Chicago</p>
-          <p>&starf; &starf; &starf; &starf; &starf;</p>
-          <p>Wow! I can't believe this hasn't ever been done before. My dog, Ralph, was lost during the 4th of July parade and
-            I thought I was doomed. I posted his photo on the site and located him within 24 hours at a nearby school. Great
-            site.
-          </p>
+    </section>
+    <!-- Image Section - set the background image for the header in the line below -->
+    <section class="py-5 bg-image-full" id="secondDog" style="background-image: url('https://media.guim.co.uk/ffa8c270e3a2a074d853cf5c5d7ca6080ba1077a/0_178_5374_3226/1000.jpg');">
+        <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
+        <div style="height: 200px;"></div>
+    </section>
+    <!-- Second content section -->
+    <section class="py-5">
+        <div class="container" id="userReviews">
+            <!-- User Experience Section -->
+            <h3>Your Experience Matters to Us</h3>
+            <p></p>
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <p>Sarah Smith: Lakeview, Chicago</p>
+                    <p>&starf; &starf; &starf; &starf; &starf;</p>
+                    <p>My dog was lost one night in January, and I thought I'd never see her again. I feel so lucky to have used Find Fido, where I reported my dog and was able to contact the person who found her in less than 45 minutes. I wish this existed in other cities!
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <p>Luke Lawrence: Gold Coast, Chicago</p>
+                    <p>&starf; &starf; &starf; &starf; &starf;</p>
+                    <p>Wow! I can't believe this hasn't ever been done before. My dog, Ralph, was lost during the 4th of July parade and I thought I was doomed. I posted his photo on the site and located him within 24 hours at a nearby school. Great site.
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <p>Jenny Jones: Logan Square, Chicago</p>
+                    <p>&starf; &starf; &starf; &starf; &star;</p>
+                    <p>Find Fido is a worthwhile site to follow. I check here every day for lost pets in my area. Four stars because this doesn't exist for cats yet.
+                    </p>
+                </div>
+            </div>
+            <!-- Social Media Icon Input -->
+            <div class="row">
+                <div class="col-xs-12 text-center social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-google"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                </div>
+            </div>
         </div>
-        <div class="col-xs-12 col-md-4">
-          <p>Jenny Jones: Logan Square, Chicago</p>
-          <p>&starf; &starf; &starf; &starf; &star;</p>
-          <p>Find Fido is a worthwhile site to follow. I check here every day for lost pets in my area. Four stars because this
-            doesn't exist for cats yet.
-          </p>
-        </div>
-      </div>
-      <!-- Social Media Icon Input -->
-      <div class="row">
-        <div class="col-xs-12 text-center social">
-          <a href="#" class="fa fa-facebook"></a>
-          <a href="#" class="fa fa-twitter"></a>
-          <a href="#" class="fa fa-google"></a>
-          <a href="#" class="fa fa-linkedin"></a>
-        </div>
-      </div>
+    </section>
     </div>
-  </section>
-  </div>
-  <!-- Footer -->
-  <footer class="py-5 bg-dark" id="footerChange">
-    <div class="container" id="footer">
-      <div class="row">
-        <div class="col-xs-12 col-md-4 text-center text-white">
-          <p>About</p>
-          <p class="small">Founded in 2018</p>
-          <p class="small">Based in Chicago, IL</p>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark" id="footerChange">
+        <div class="container" id="footer">
+            <div class="row">
+                <div class="col-xs-12 col-md-4 text-center text-white">
+                    <p>About</p>
+                    <p class="small">Founded in 2018</p>
+                    <p class="small">Based in Chicago, IL</p>
+                </div>
+                <div class="col-xs-12 col-md-4 text-center text-white">
+                    <p>Contact</p>
+                    <p class="small">Email: findfido@fido.com</p>
+                    <p class="small">Phone: 1-800-555-PETS</p>
+                </div>
+                <div class="col-xs-12 col-md-4 text-center text-white">
+                    <p>Resources</p>
+                    <p class="small">Google</p>
+                    <p class="small">Petfinder</p>
+                </div>
+            </div>
         </div>
-        <div class="col-xs-12 col-md-4 text-center text-white">
-          <p>Contact</p>
-          <p class="small">Email: findfido@fido.com</p>
-          <p class="small">Phone: 1-800-555-PETS</p>
-        </div>
-        <div class="col-xs-12 col-md-4 text-center text-white">
-          <p>Resources</p>
-          <p class="small">Google</p>
-          <p class="small">Petfinder</p>
-
-        </div>
-
-      </div>
- 
+    </footer>
     </div>
-
-  </footer>
-  </div>
-
-  <!-- Bootstrap core JavaScript -->
-  
-  <script src="startbootstrap-full-width-pics-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Firebase 2.4.1 for the database push and rest of app-->
-  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-  <!-- Moment.js -->
-  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-  <!-- Javascript -->
-  <script src="assets/javascript/main.js"></script>
-  <!-- Firebase 3.7.4 for the storage push-->
-  <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
-  <!-- Initialize Firebase -->
-  <script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="startbootstrap-full-width-pics-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Firebase 2.4.1 for the database push and rest of app-->
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+    <!-- Moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Javascript -->
+    <script src="assets/javascript/main.js"></script>
+    <!-- Firebase 3.7.4 for the storage push-->
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <!-- Initialize Firebase -->
+    <script>
     var config = {
-      apiKey: "AIzaSyCY_YbuxtgsKPyTNvN0cnzCAWHr51RMJ84",
-      authDomain: "nwuproject1.firebaseapp.com",
-      databaseURL: "https://nwuproject1.firebaseio.com",
-      projectId: "nwuproject1",
-      storageBucket: "nwuproject1.appspot.com",
-      messagingSenderId: "218962101512"
+        apiKey: "AIzaSyCY_YbuxtgsKPyTNvN0cnzCAWHr51RMJ84",
+        authDomain: "nwuproject1.firebaseapp.com",
+        databaseURL: "https://nwuproject1.firebaseio.com",
+        projectId: "nwuproject1",
+        storageBucket: "nwuproject1.appspot.com",
+        messagingSenderId: "218962101512"
     };
     firebase.initializeApp(config);
-  </script>
+    </script>
 </body>
 
 </html>
