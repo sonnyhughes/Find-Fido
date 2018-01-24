@@ -33,6 +33,9 @@ $(document).ready(function(){
 
         //show map
         $(".showMap").addClass("map");
+        // $(".modal-body").hide("form").show(".showMap");
+
+      
 
         //map logic
         var address = $('#addr').val();

@@ -28,7 +28,7 @@
 
 
   <!--Google Maps API Link-->
-<!--   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQplToC7vrZZPdPirJm0clLpN3YbMW6U&callback=initMap" async
+  <!--   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQplToC7vrZZPdPirJm0clLpN3YbMW6U&callback=initMap" async
     defer></script> -->
   </body>
 
@@ -51,10 +51,6 @@
         <div class="row">
           <div class="col-6">
             <a class="navbar-brand" href="index.html">Find Fido</a>
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-              aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button> -->
           </div>
         </div>
       </div>
@@ -67,16 +63,15 @@
     <div id="content" class="jumboText">
       <h1 class="text-center">Search Lost Dogs</h1>
       <h1 class="text-center">✶ ✶ ✶ ✶</h1>
+      <!-- Button to access local vets -->
       <button type="button" class="lost btn btn-info btn-lg vetButton" data-toggle="modal" data-target="#vetModal">Find a Vet</button>
     </div>
-  </div>
-  </div>
   </div>
 
   <!-- Vet Modal Pop up -->
   <div id="vetModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
-      <!-- Modal content-->
+
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -85,15 +80,16 @@
           <div class="panel-body">
             <form>
               <div class="container">
-                <h2 style="text-align:center;">Enter a Location to Search Local Veterinarians</h2>
+                <h3 class="modalHeader">Search Local Veterinarians</h3>
 
                 <form>
                   <div class="form-group">
                     <div style="float: right;">
-                      <div id="map" style="width:415px; height:400px;"></div>
+                      <div id="map"></div>
                     </div>
 
                     <div style="float: left; width: 400;">
+                      <!-- Modal content -->
                       <form name="frm_map" id="frm_map">
                         <table>
                           <tr>
@@ -144,7 +140,7 @@
 
 
   <!-- Current Lost Dogs -->
-<!--   <div class="panel panel-info" id="reported">
+  <!--   <div class="panel panel-info" id="reported">
 
     <div class="container">
       <div class="row">
@@ -154,40 +150,35 @@
       </div>
     </div> -->
 
-    <!-- Current Lost Dogs -->
+  <!-- Current Lost Dogs -->
 
-    <div class="panel panel-info" id="reportTable">
-      <div class="panel-heading">
-        <h2 class="panel-title">
-          <strong>Search Dogs:</strong>
-          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-        </h2>
-      </div>
-      <div class="panel-body">
-        <table class="table table-hover" id='dogTable'>
-          <thead>
-            <tr>
-              <th>Status</th>
-              <th>Breed</th>
-              <th>Color</th>
-              <th>Location</th>
-              <th>Missing Since</th>
-              <th>Lost Time of Day</th>
-              <th>Please Contact</th>
-              <th>Comments</th>
-            </tr>
-          </thead>
-          <tbody>
-
-          </tbody>
-        </table>
-      </div>
+  <div class="panel panel-info" id="reportTable">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        <strong>Search Dogs:</strong>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+      </h2>
     </div>
+    <div class="panel-body">
+      <table class="table table-hover" id='dogTable'>
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Breed</th>
+            <th>Color</th>
+            <th>Location</th>
+            <th>Missing Since</th>
+            <th>Lost Time of Day</th>
+            <th>Please Contact</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody>
 
+        </tbody>
+      </table>
+    </div>
   </div>
-  </div>
-  </div>
-
 
   <!-- Footer -->
   <footer class="py-5 bg-dark" id="footerChange">
@@ -207,15 +198,11 @@
           <p>Resources</p>
           <p class="small">Google</p>
           <p class="small">Petfinder</p>
-
         </div>
-
       </div>
-      <!-- <p class="m-0 text-center text-white">&copy; Northwestern University 2018</p> -->
     </div>
-    <!-- /.container -->
   </footer>
-  </div>
+
   <!-- Google API for Vet Locations -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmmL01G6CzZcoBiA4YJysg_hIEnUTbqss&libraries=places&callback=initialize"
     async defer></script>
@@ -230,12 +217,8 @@
   <!-- Moment.js -->
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   <!-- Javascript -->
-  <!--   <script src="assets/javascript/main.js"></script> -->
   <script src="assets/javascript/search.js"></script>
   <!-- Link to Vet JS -->
   <script src="vets.js"></script>
-
-
 </body>
-
 </html>
