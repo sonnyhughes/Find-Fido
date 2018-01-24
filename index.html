@@ -80,99 +80,37 @@
           <div class="modal-dialog">
 
 
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
-              <div class="modal-body">
 
-                <!-- Report Missing Dog Form-->
-                <!-- Submission form for new dogs -->
-                <div class="panel-body" id="formDiv">
-                  <form data-toggle="validator" role="form" id="dogForm">
+                                        </div>
+                                        <!-- Missing Time Input -->
+                                        <div class="form-group">
+                                            <label for="dogMissingTimeInput">Missing Since (Time of Day):</label>
+                                            <select class="form-control" id="dogMissingTimeInput">
+                                                <option>Morning</option>
+                                                <option>Afternoon</option>
+                                                <option>Evening</option>
+                                            </select>
+                                        </div>
+                                        <!-- Email Input -->
+                                        <div class="form-group">
+                                            <label for="userContactEmail" class="control-label">Email Address:</label>
+                                            <input type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="userContactEmail" placeholder="email@email.com"
+                                                data-error="Please enter a valid email address." required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>  
+                                        <!-- Commment Box -->
+                                        <div class="form-group">
+                                            <label for="comment">Comment:</label>
+                                            <textarea class="form-control" rows="5" id="userComment"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-info" id="addDog">Submit</button>
+                                        </div>
+                                        </form>
+                                        <div class="showMap" id="map1">
+                                        </div>
+                                </div>
 
-                    <div class="container">
-                      <h2>Submission Form</h2>
-                    
-                      <form>
-                        <div class="form-group">
-                           <!-- Lost or Found Input -->
-                          <label for="dogLostFoundInput">Are you reporting a lost or found animal:</label>
-                          <select class="form-control" id="dogLostFoundInput">
-                            <option>Lost</option>
-                            <option>Found</option>
-                          </select>
-                          </div>
-                          <!-- Breed Input -->
-                          <div class="form-group">
-                          <label for="dogBreedInput">Breed:</label>
-                          <select class="form-control" id="dogBreedInput">
-                            <option>Bulldog</option>
-                            <option>Cattle Dog</option>
-                            <option>Chihuahua</option>
-                            <option>Hound</option>
-                            <option>Husky</option>
-                            <option>Mastiff</option>
-                            <option>Pomeranian</option>
-                            <option>Poodle</option>
-                            <option>Retriever</option>
-                            <option>Shepherd</option>
-                            <option>Shih Tzu</option>
-                            <option>Spaniel</option>
-                            <option>Terrier</option>
-                          </select>
-                          </div>
-                          <!-- Color Input -->
-                          <div class="form-group">
-                          <label for="dogColorInput">Color:</label>
-                          <select class="form-control" id="dogColorInput">
-                            <option>Brown</option>
-                            <option>Black</option>
-                            <option>White</option>
-                            <option>Red</option>
-                            <option>Gray</option>
-                          </select>
-                          </div>
-                          <!-- Size Input -->
-                          <div class="form-group">
-                          <label for="dogWeightInput">Size:</label>
-                          <select class="form-control" id="dogWeightInput">
-                            <option>Small</option>
-                            <option>Medium</option>
-                            <option>Large</option>
-                          </select>
-                          </div>
-                          <!-- Location Input -->
-                          <div class="form-group">
-                            <label for="dogLocationInput">Last Known Location:</label>
-                            <input type="text" class="form-control" id="addr" value="Chicago,Il" placeholder="Location (Address or Place)">
-                          </div>
-                          <!-- Missing Date Input -->
-                          <div class="form-group">
-                          <label for="dogMissingDateInput">Missing Since (Date):</label>
-                          <input type="text" class="form-control" placeholder="MM/DD/YY" id="dogMissingDateInput">
-                          </div>
-                          <!-- Missing Time Input -->
-                          <div class="form-group">
-                          <label for="dogMissingTimeInput">Missing Since (Time of Day):</label>
-                          <select class="form-control" id="dogMissingTimeInput">
-                            <option>Morning</option>
-                            <option>Afternoon</option>
-                            <option>Evening</option>
-                          </select>
-                          </div>
-                          <!-- Email Input -->
-                          <div class="form-group">
-                              <label for="userContactEmail" class="control-label">Email Address:</label>
-                              <input type="email"  class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="userContactEmail" placeholder="email@email.com" data-error="Please enter a valid email address." required>
-                              <div class="help-block with-errors"></div>
-                            </div>
-                        <!-- Drop image -->
-                        <!-- <div class="dz-preview dz-file-preview">
-                          <div class="dz-details">
-                            <div class="dz-filename">
-                              <span data-dz-name></span>
                             </div>
                         </div>
                     </div>
