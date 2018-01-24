@@ -21,10 +21,20 @@
     <!-- Custom styles for this template -->
     <link href="startbootstrap-full-width-pics-master/css/full-width-pics.css" rel="stylesheet">
     <script src="assets/javascript/dropzone.js"></script>
-    <!-- map css  -->
+    <!-- Map CCC  -->
     <link rel="stylesheet" href="assets/css/map.css">
     <!--Google Maps API Link-->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTQplToC7vrZZPdPirJm0clLpN3YbMW6U&libraries=places"></script>
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="startbootstrap-full-width-pics-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Firebase 2.4.1 for the database push and rest of app-->
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+    <!-- Firebase 3.7.4 for the storage push-->
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <!-- Moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
     <title id="logo">Find Fido</title>
     <style>
     .pac-container {
@@ -57,12 +67,6 @@
             <div id="lostandfound">
                 <button type="button" class="lost btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Report</button>
                 <a class="found" href="Found_Dogs.html">Search</a>
-                <!--         
-        <label class="found">
-          <input id="fileButton" type="file" value= "upload" style="display:none;">
-            Upload Image
-        </label>
-      -->
             </div>
         </header>
         <!-- Modal -->
@@ -248,16 +252,7 @@
         </div>
     </footer>
     </div>
-    <!-- Bootstrap core JavaScript -->
-    <script src="startbootstrap-full-width-pics-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Firebase 2.4.1 for the database push and rest of app-->
-    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-    <!-- Moment.js -->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <!-- Javascript -->
-    <script src="assets/javascript/main.js"></script>
-    <!-- Firebase 3.7.4 for the storage push-->
-    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+
     <!-- Initialize Firebase -->
     <script>
     var config = {
@@ -270,6 +265,13 @@
     };
     firebase.initializeApp(config);
     </script>
+      <!-- Javascript -->
+    <script src="assets/javascript/main.js"></script>
+    <!-- Javascript -->
+  <script src="assets/javascript/search.js"></script>
+  <!-- Link to Vet JS -->
+  <script src="assets/javascript/vets.js"></script>
+
 </body>
 
 </html>
