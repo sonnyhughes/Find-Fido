@@ -1,12 +1,12 @@
-$(document).ready(function(){
-    
+$(document).ready(function() {
+
     // Firebase
     var dogData = new Firebase("https://nwuproject1.firebaseio.com/");
 
     //maps
     var geocoder;
     var map;
-    var markers =[];
+    var markers = [];
 
     //autocomplete form Google
     function init() {
@@ -18,8 +18,8 @@ $(document).ready(function(){
     google.maps.event.addDomListener(window, 'load', init);
 
     // Button to add Dogs
-    $("#addDog").on("click", function(){
-       
+    $("#addDog").on("click", function() {
+
         // Parses input values and attaches them to a variable      
         var LostFoundInput = $("#dogLostFoundInput").val().trim();
         var BreedInput = $("#dogBreedInput").val().trim();
@@ -41,7 +41,7 @@ $(document).ready(function(){
         var address = $('#addr').val();
 
         geocoder = new google.maps.Geocoder();
-        geocoder.geocode({ 'address': address }, function (results, status) {
+        geocoder.geocode({ 'address': address }, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
 
                 //console.log('geocoder results:');
@@ -81,7 +81,7 @@ $(document).ready(function(){
                 });
 
                 markers.push(marker);
-                
+
 
                 var contentString = '<div id="content">' +
                     '<div id="siteNotice">' +
@@ -100,7 +100,7 @@ $(document).ready(function(){
                 var infowindow = new google.maps.InfoWindow({
                     content: contentString
                 });
-                marker.addListener('click', function () {
+                marker.addListener('click', function() {
                     infowindow.open(map, marker);
                 });
 
@@ -119,12 +119,12 @@ $(document).ready(function(){
         // console.log(MissingTimeInput);
         // console.log(ContactEmail);
         // console.log(commentInput);
-        
+
 
 
         // Creates object from input fields and pushes to firebase
         var newDog = {
-            lostFound:  LostFoundInput,
+            lostFound: LostFoundInput,
             breed: BreedInput,
             color: ColorInput,
             location: LocationInput,
@@ -154,7 +154,7 @@ $(document).ready(function(){
         // Prevents page refresh
         return false;
     });
-    
+
 
     //Pushes image upload to Firebase Storage
     // var fileButton = document.getElementById('fileButton');
@@ -165,7 +165,3 @@ $(document).ready(function(){
     // }); 
 
 });
-
-
-
-
