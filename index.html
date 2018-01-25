@@ -20,6 +20,7 @@
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
     <link href="startbootstrap-full-width-pics-master/css/full-width-pics.css" rel="stylesheet">
+    <script src="assets/javascript/dropzone.js"></script>
     <!-- Map CCC  -->
     <link rel="stylesheet" href="assets/css/map.css">
     <!--Google Maps API Link-->
@@ -50,6 +51,10 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <a class="navbar-brand" href="index.html">Find Fido</a>
+                        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
                     </div>
                 </div>
             </div>
@@ -79,116 +84,98 @@
                             <form data-toggle="validator" role="form" id="dogForm">
                                 <div class="container">
                                     <h2>Submission Form</h2>
-                                    <div class="form-group">
-                                        <!-- Lost or Found Input -->
-                                        <label for="dogLostFoundInput">Are you reporting a lost or found animal:</label>
-                                        <select class="form-control" id="dogLostFoundInput">
-                                            <option>Lost</option>
-                                            <option>Found</option>
-                                        </select>
-                                    </div>
-                                    <!-- Breed Input -->
-                                    <div class="form-group">
-                                        <label for="dogBreedInput">Breed:</label>
-                                        <select class="form-control" id="dogBreedInput">
-                                            <option>Bulldog</option>
-                                            <option>Cattle Dog</option>
-                                            <option>Chihuahua</option>
-                                            <option>Hound</option>
-                                            <option>Husky</option>
-                                            <option>Mastiff</option>
-                                            <option>Pomeranian</option>
-                                            <option>Poodle</option>
-                                            <option>Retriever</option>
-                                            <option>Shepherd</option>
-                                            <option>Shih Tzu</option>
-                                            <option>Spaniel</option>
-                                            <option>Terrier</option>
-                                        </select>
-                                    </div>
-                                    <!-- Color Input -->
-                                    <div class="form-group">
-                                        <label for="dogColorInput">Color:</label>
-                                        <select class="form-control" id="dogColorInput">
-                                            <option>Brown</option>
-                                            <option>Black</option>
-                                            <option>White</option>
-                                            <option>Red</option>
-                                            <option>Gray</option>
-                                        </select>
-                                    </div>
-                                    <!-- Size Input -->
-                                    <div class="form-group">
-                                        <label for="dogWeightInput">Size:</label>
-                                        <select class="form-control" id="dogWeightInput">
-                                            <option>Small</option>
-                                            <option>Medium</option>
-                                            <option>Large</option>
-                                        </select>
-                                    </div>
-                                    <!-- Location Input -->
-                                    <div class="form-group">
-                                        <label for="dogLocationInput">Last Known Location:</label>
-                                        <input type="text" class="form-control" id="addr"  placeholder="Location (Address or Place)" data-error="Please enter a valid address." required>
-                                        <div class="help-block with-errors"></div>
+                                    <form>
+                                        <div class="form-group">
+                                            <!-- Lost or Found Input -->
+                                            <label for="dogLostFoundInput">Are you reporting a lost or found animal:</label>
+                                            <select class="form-control" id="dogLostFoundInput">
+                                                <option>Lost</option>
+                                                <option>Found</option>
+                                            </select>
+                                        </div>
+                                        <!-- Breed Input -->
+                                        <div class="form-group">
+                                            <label for="dogBreedInput">Breed:</label>
+                                            <select class="form-control" id="dogBreedInput">
+                                                <option>Bulldog</option>
+                                                <option>Cattle Dog</option>
+                                                <option>Chihuahua</option>
+                                                <option>Hound</option>
+                                                <option>Husky</option>
+                                                <option>Mastiff</option>
+                                                <option>Pomeranian</option>
+                                                <option>Poodle</option>
+                                                <option>Retriever</option>
+                                                <option>Shepherd</option>
+                                                <option>Shih Tzu</option>
+                                                <option>Spaniel</option>
+                                                <option>Terrier</option>
+                                            </select>
+                                        </div>
+                                        <!-- Color Input -->
+                                        <div class="form-group">
+                                            <label for="dogColorInput">Color:</label>
+                                            <select class="form-control" id="dogColorInput">
+                                                <option>Brown</option>
+                                                <option>Black</option>
+                                                <option>White</option>
+                                                <option>Red</option>
+                                                <option>Gray</option>
+                                            </select>
+                                        </div>
+                                        <!-- Size Input -->
+                                        <div class="form-group">
+                                            <label for="dogWeightInput">Size:</label>
+                                            <select class="form-control" id="dogWeightInput">
+                                                <option>Small</option>
+                                                <option>Medium</option>
+                                                <option>Large</option>
+                                            </select>
+                                        </div>
+                                        <!-- Location Input -->
+                                        <div class="form-group">
+                                            <label for="dogLocationInput">Last Known Location:</label>
+                                            <input type="text" class="form-control" id="addr" value="Chicago,Il" placeholder="Location (Address or Place)">
+                                        </div>
+                                        <!-- Missing Date Input -->
+                                        <div class="form-group">
+                                            <label for="dogMissingDateInput">Missing Since (Date):</label>
+                                            <input type="date" class="form-control" placeholder="MM/DD/YY" id="dogMissingDateInput">
+                                        </div>
+                                        <!-- Missing Time Input -->
+                                        <div class="form-group">
+                                            <label for="dogMissingTimeInput">Missing Since (Time of Day):</label>
+                                            <select class="form-control" id="dogMissingTimeInput">
+                                                <option>Morning</option>
+                                                <option>Afternoon</option>
+                                                <option>Evening</option>
+                                            </select>
+                                        </div>
+                                        <!-- Email Input -->
+                                        <div class="form-group">
+                                            <label for="userContactEmail" class="control-label">Email Address:</label>
+                                            <input type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="userContactEmail" placeholder="email@email.com" data-error="Please enter a valid email address." required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <!-- Commment Box -->
+                                    <!--     <div class="form-group">
+                                            <label for="comment">Comment:</label>
+                                            <textarea class="form-control" rows="5" id="userComment"></textarea>
+                                        </div> -->
+                                    
                                 
-                                    </div>
-                                    <!-- Missing Date Input -->
-                                    <div class="form-group">
-                                        <label for="dogMissingDateInput">Missing Since (Date):</label>
-                                        <input type="date" class="form-control" placeholder="MM/DD/YY" id="dogMissingDateInput" data-error="Please enter a valid date" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                    <!-- Missing Time Input -->
-                                    <div class="form-group">
-                                        <label for="dogMissingTimeInput">Missing Since (Time of Day):</label>
-                                        <select class="form-control" id="dogMissingTimeInput">
-                                            <option>Morning</option>
-                                            <option>Afternoon</option>
-                                            <option>Evening</option>
-                                        </select>
-                                    </div>
-                                    <!-- Email Input -->
-                                    <div class="form-group">
-                                        <label for="userContactEmail" class="control-label">Email Address:</label>
-                                        <input type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="userContactEmail" placeholder="email@email.com" data-error="Please enter a valid email address." required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                    <div class="form-group">                                    
-                                        <button type="submit" class="btn btn-info" id="addDog">Submit</button>
-                                    </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-info" id="addDog">Submit</button>
                                 </div>
                             </form>
+                            <div class="showMap" id="map1">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Second Map Modal -->
-      <!-- Modal -->
-     <!-- <div class="modal fade modal2" role="dialog">
-        <div class="modal-dialog">      
-           Modal content
-          <div class="modal-content">
-            <div class="modal-header">
-                <a href="#myModal" data-toggle="modal" data-dismiss="modal" data-target="#myModal" class="previous">&laquo; &#8249;</a>
-                <h4 class="modal-title" style="text-align:center;">Confirm Last Known Location</h4>
-            </div>
-            <div class="modal-body">
-                <div class="showMap modal2" id="map1"></div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal" 
-                onclick="javascript:window.location.reload()">Correct</button>     
-            </div>
-          </div>        
-        </div>
-      </div>
-      
-    </div> -->
-
     <!-- Content section -->
     <section class="py-5">
         <div class="container">
@@ -199,8 +186,10 @@
             <p>Begin your search by clicking the appropriate option above.</p>
         </div>
     </section>
-      <section class="py-5 bg-image-full" id="secondDog" style="background-image: url('https://media.guim.co.uk/ffa8c270e3a2a074d853cf5c5d7ca6080ba1077a/0_178_5374_3226/1000.jpg');">
-          <div style="height: 200px;"></div>
+    <!-- Image Section - set the background image for the header in the line below -->
+    <section class="py-5 bg-image-full" id="secondDog" style="background-image: url('https://media.guim.co.uk/ffa8c270e3a2a074d853cf5c5d7ca6080ba1077a/0_178_5374_3226/1000.jpg');">
+        <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
+        <div style="height: 200px;"></div>
     </section>
     <!-- Second content section -->
     <section class="py-5">

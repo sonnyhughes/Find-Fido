@@ -89,15 +89,10 @@ button:hover, a:hover {
   left: -14%;
 }
 
-/* Modal Styling */
 #map{
 width: 415px;
 height:400px;
 padding-bottom: 2%;
-}
-
-#myModal{
-  overflow-y: scroll;
 }
 
 .modalHeader{

@@ -14,11 +14,11 @@ $(document).ready(function() {
         var firebaseMissingDate = childSnapshot.val().missingDate;
         var firebaseMissingTime = childSnapshot.val().missingTime;
         var firebaseContactEmail = childSnapshot.val().contactEmail;
-        var firebaseComment = childSnapshot.val().commentInput;
+        // var firebaseComment = childSnapshot.val().commentInput;
 
 
         // Append dog info to table on page
-        $("#dogTable > tbody").append("<tr><td>" + firebaseLostFound + "</td><td>" + firebaseBreed + "</td><td>" + firebaseColor + "</td><td>" + firebaseLocation + "</td><td>" + firebaseMissingDate + "</td><td>" + firebaseMissingTime + "</td><td>" + firebaseContactEmail + "</td><td>" + firebaseComment + "</td></tr>");
+        $("#dogTable > tbody").append("<tr><td>" + firebaseLostFound + "</td><td>" + firebaseBreed + "</td><td>" + firebaseColor + "</td><td>" + firebaseLocation + "</td><td>" + firebaseMissingDate + "</td><td>" + firebaseMissingTime + "</td><td>" + firebaseContactEmail +  "</td></tr>");
 
     });
 });
