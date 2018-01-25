@@ -26,12 +26,7 @@ $(document).ready(function() {
     });
 
     // Button to add Dogs
-    // $("#addDog").on("click", function() {
-
-    $('#form').validator().on('submit', function (e) {
-        if (e.isDefaultPrevented()) {
-            return;
-        } else { 
+    $("#addDog").on("click", function() {
         
             // hide form modal and show map modal
             $("#myModal").modal('hide');
@@ -47,7 +42,7 @@ $(document).ready(function() {
             var MissingDateInput = $("#dogMissingDateInput").val().trim();
             var MissingTimeInput = $("#dogMissingTimeInput").val().trim();
             var ContactEmail = $("#userContactEmail").val().trim();
-            var commentInput = $("#userComment").val().trim();  
+
             //map logic
             var address = $('#addr').val();
 
@@ -83,12 +78,6 @@ $(document).ready(function() {
                         position: results[0].geometry.location,
                         draggable: false,
                         animation: google.maps.Animation.DROP,
-                        // icon: {
-                        //     fillColor: '#6331AE',
-                        //     fillOpacity: 1,
-                        //     strokeColor: '',
-                        //     strokeWeight: 0
-                        // },
                     });
 
                     markers.push(marker);
@@ -97,17 +86,8 @@ $(document).ready(function() {
                     var contentString = '<div id="content">' +
                         '<div id="siteNotice">' +
                         '</div>' +
-                        '<h1 id="firstHeading" class="firstHeading">Lost Dog</h1>' +
-                        '<div id="bodyContent">' +
-                        '<p><b>Lost Dog</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-                        'sandstone rock formation in the southern part of the ' +
-                        'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) ' +
-                        'south west of the nearest large town, Alice Springs;</p>' +
-                        '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-                        'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
-                        '(last visited June 22, 2009).</p>' +
-                        '</div>' +
-                        '</div>';
+                        '<h1 id="firstHeading" class="firstHeading">Lost Dog</h1>'
+                        ;
                     var infowindow = new google.maps.InfoWindow({
                         content: contentString
                     });
@@ -129,7 +109,7 @@ $(document).ready(function() {
                 missingDate: MissingDateInput,
                 missingTime: MissingTimeInput,
                 contactEmail: ContactEmail,
-                comment: commentInput,
+                // comment: commentInput,
                 //marker: markers[0]
             }
 
@@ -145,11 +125,10 @@ $(document).ready(function() {
             $("#dogMissingDateInput").val("");
             $("#dogMissingTimeInput").val("");
             $("#userContactEmail").val("");
-            $("#userComment").val("");
 
             // Prevents page refresh
             return false;
-            }
-        })
+            
+            })
 
     });
