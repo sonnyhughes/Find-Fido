@@ -83,8 +83,7 @@
                         <div class="panel-body" id="formDiv">
                             <form data-toggle="validator" role="form" id="dogForm">
                                 <div class="container">
-                                    <h2>Submission Form</h2>
-                                    <form>
+                                    <h2>Submission Form</h2>                                
                                         <div class="form-group">
                                             <!-- Lost or Found Input -->
                                             <label for="dogLostFoundInput">Are you reporting a lost or found animal:</label>
@@ -135,12 +134,14 @@
                                         <!-- Location Input -->
                                         <div class="form-group">
                                             <label for="dogLocationInput">Last Known Location:</label>
-                                            <input type="text" class="form-control" id="addr" value="Chicago,Il" placeholder="Location (Address or Place)">
+                                            <input type="text" class="form-control" id="addr" value="Chicago,Il" placeholder="Location (Address or Place)" data-error="Please enter a valid address." required>
+                                            <div class="help-block with-errors"></div>
                                         </div>
                                         <!-- Missing Date Input -->
                                         <div class="form-group">
                                             <label for="dogMissingDateInput">Missing Since (Date):</label>
-                                            <input type="date" class="form-control" placeholder="MM/DD/YY" id="dogMissingDateInput">
+                                            <input type="date" class="form-control" placeholder="MM/DD/YY" id="dogMissingDateInput" data-error="Please enter a valid date." required>
+                                            <div class="help-block with-errors"></div>
                                         </div>
                                         <!-- Missing Time Input -->
                                         <div class="form-group">
