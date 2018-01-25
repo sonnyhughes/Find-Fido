@@ -20,6 +20,8 @@ $(document).ready(function() {
     // Button to add Dogs
     $("#addDog").on("click", function() {
 
+        $(".form-group").hide();
+
         // Parses input values and attaches them to a variable      
         var LostFoundInput = $("#dogLostFoundInput").val().trim();
         var BreedInput = $("#dogBreedInput").val().trim();
