@@ -17,8 +17,21 @@ $(document).ready(function() {
 
     google.maps.event.addDomListener(window, 'load', init);
 
+    // clicking arrows back goes back to form
+    $(".previous").on("click", function(){
+          //show map
+          $("#myModal").modal('show');
+          $(".modal2").modal('hide');
+          $('body').removeClass('modal-open');               
+    });
+
+
     // Button to add Dogs
     $("#addDog").on("click", function() {
+        // hide form modal and show map modal
+        $("#myModal").modal('hide');
+        $(".modal2").modal('show');
+        $(".showMap").addClass("map");
 
         // Parses input values and attaches them to a variable      
         var LostFoundInput = $("#dogLostFoundInput").val().trim();
@@ -31,11 +44,8 @@ $(document).ready(function() {
         var ContactEmail = $("#userContactEmail").val().trim();
         var commentInput = $("#userComment").val().trim();
 
-        //show map
-        $(".showMap").addClass("map");
-        // $(".modal-body").hide("form").show(".showMap");
-
       
+     
 
         //map logic
         var address = $('#addr').val();
